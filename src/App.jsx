@@ -10,6 +10,7 @@ import Contactus from './Pages/Contactus'
 import Moodboard from './Pages/Moodboard'
 import Login from './Pages/Login'
 import Signup from './Components/Signup'
+import Footer from './Components/Footer'
 const App = () => {
   return (
     <BrowserRouter>
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/Login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>    
   )
 }
