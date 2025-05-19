@@ -9,6 +9,7 @@ import Portfolio from './Pages/Portfolio'
 import Contactus from './Pages/Contactus'
 import Moodboard from './Pages/Moodboard'
 import Login from './Pages/Login'
+import Signup from './Components/Signup'
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/Contactus" element={<Contactus />} />
         <Route path="/Moodboard" element={<Moodboard />} />
         <Route path="/Login" element={<Login/>} />
+        <Route path="/Signup" element={<Signup/>} />
       </Routes>
     </BrowserRouter>    
   )

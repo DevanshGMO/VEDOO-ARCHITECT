@@ -1,9 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import MoodboardSection from "../Components/MoodboardComp/MoodboardSection";
+import MoodServices from "../Components/MoodboardComp/MoodServices";
 const Moodboard = () => {
   return (
-    <div>Moodboard</div>
-  )
-}
 
-export default Moodboard
+    <>
+    <MoodboardSection />
+    <MoodServices/>
+    </>
+  );
+};
+
+export default Moodboard;
