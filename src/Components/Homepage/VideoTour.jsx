@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Video from "../.././assets/Video.mp4";
+
 export default function VideoTour() {
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
@@ -17,10 +18,15 @@ export default function VideoTour() {
                 console.log("Video autoplay prevented:", error);
               });
             }
+          } else {
+            // Pause video when out of view (optional, but good for performance)
+            if (videoRef.current) {
+              videoRef.current.pause();
+            }
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 } // Adjust threshold as needed
     );
 
     if (sectionRef.current) {
@@ -32,18 +38,18 @@ export default function VideoTour() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <section
       ref={sectionRef}
-      className="w-full py-16 px-4 md:px-8 lg:px-16 opacity-0 transition-opacity duration-1000 ease-in"
+      // Adjusted padding for the section to give more room for the video to expand
+      className="w-full py-10 sm:py-16 md:py-20 lg:py-24 xl:py-28 opacity-0 transition-opacity duration-1000 ease-in"
     >
-      <div className="max-w-6xl mx-auto">
-        {/* Heading and Description */}
-        <div className="text-center mb-12">
+      <div className="container mx-auto px-0 md:px-0 lg:px-0"> {/* Remove horizontal padding here for full-width video */}
+        <div className="text-center mb-8 md:mb-12 px-4 md:px-8 lg:px-16"> {/* Add padding back for text content */}
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Take A <span className="text-orange-500">Tour</span>
+            Take A <span className="text-[#FF9100]">Tour</span>
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Choose from unique design concepts from multiple accomplished online
@@ -51,14 +57,19 @@ export default function VideoTour() {
           </p>
         </div>
 
-        {/* Video Section */}
-        <div className="relative w-full aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.01]">
+        {/* Video Section - Adjusted for full width as per image */}
+        {/*
+          Removed: max-w-4xl mx-auto
+          Added: rounded-none for full width edges, or keep rounded-lg if you want slight rounding at the very edges.
+          The image shows it extending to the outer blue lines, suggesting it fills the container.
+        */}
+        <div className="relative w-full aspect-video overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.005]">
           {/* Play button overlay */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-            <div className="bg-orange-500 rounded-full p-4 shadow-lg">
+            <div className="bg-[#FF9100] rounded-full p-4 shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10 text-white"
+                className="h-10 w-10 text-white cursor-pointer"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -77,7 +88,9 @@ export default function VideoTour() {
             loop
             muted
             playsInline
-            poster="/api/placeholder/1920/1080"
+            // A common practice for posters is to use an image from your assets or a generated one.
+            // For a production app, you'd replace this with an actual image.
+            poster="https://via.placeholder.com/1920x1080?text=Video+Poster"
           >
             <source src={Video} type="video/mp4" />
             Your browser does not support the video tag.
@@ -85,7 +98,7 @@ export default function VideoTour() {
         </div>
 
         {/* Optional Call to Action */}
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center px-4 md:px-8 lg:px-16"> {/* Add padding back for button */}
           <button className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition duration-300 transform hover:scale-105">
             View More Projects
           </button>

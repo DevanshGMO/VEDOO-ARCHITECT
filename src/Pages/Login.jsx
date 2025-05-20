@@ -39,7 +39,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen shadow-cyan-500/50"> 
-      {/* Left Image Section */}
+
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -49,7 +49,7 @@ const Login = () => {
         <img src={Img} alt="Villa" className="object-cover w-full h-full" />
       </motion.div>
 
-      {/* Right Section */}
+
       <div
         className={`w-full md:w-1/2 flex items-center justify-center p-6
         transform transition-all duration-700 ease-out delay-300
@@ -65,7 +65,7 @@ const Login = () => {
             className="space-y-4"
             onSubmit={otpSent ? handleLogin : handleSendOtp}
           >
-            {/* Mobile Number Field */}
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Mobile Number
@@ -80,7 +80,7 @@ const Login = () => {
               />
             </div>
 
-            {/* OTP Field (conditionally shown) */}
+    
             {otpSent && (
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -101,7 +101,7 @@ const Login = () => {
                 {resendMessage}
               </div>
             )}
-            {/* Remember Me and Resend OTP */}
+    
             <div className="flex justify-between items-center text-sm">
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="form-checkbox" />
@@ -116,22 +116,16 @@ const Login = () => {
                 </button>
               )}
             </div>
-
-            {/* Sign In / Send OTP Button */}
             <button
               type="submit"
               className="w-full bg-[#FF9100] text-white py-2 rounded-md transition"
             >
               {otpSent ? "Sign In" : "Send OTP"}
             </button>
-
-            {/* Google Sign In/Up */}
             <button className="w-full border flex bg-[#052536] text-white justify-center items-center space-x-2 py-2 rounded-md transition">
               <img src={Googleicon} alt="Google" className="w-5 h-5" />
               <span>Sign in / Sign up with Google</span>
             </button>
-
-            {/* Footer Link */}
             <p className="text-center text-sm">
               Already have an account?{" "}
               <Link to="/signup" className="text-[#FF9100] hover:underline">

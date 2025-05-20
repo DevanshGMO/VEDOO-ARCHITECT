@@ -35,7 +35,7 @@ export default function AboutCompany() {
           <div className="w-full md:w-1/2 relative mb-8 md:mb-0">
             <div className="relative">
               {/* Orange border/frame */}
-              <div className="absolute -left-3 -bottom-3 w-full h-full border-4 border-orange-500 transform transition-all duration-500 hover:translate-x-1 hover:translate-y-1"></div>
+              <div className="absolute -left-3 -bottom-3 w-full h-full border-4 border-[#FF9100] transform transition-all duration-500 hover:translate-x-1 hover:translate-y-1"></div>
               
               {/* Main image */}
               <div className="relative overflow-hidden">
@@ -44,8 +44,6 @@ export default function AboutCompany() {
                   alt="Modern architectural building" 
                   className="w-full h-auto object-cover transform transition-transform duration-700 hover:scale-105"
                 />
-                
-                {/* Video overlay (when playing) */}
                 {isPlaying && (
                   <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
                     <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -55,7 +53,7 @@ export default function AboutCompany() {
             </div>
           </div>
           
-          {/* Content Column */}
+    
           <div className="w-full md:w-1/2 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 transform transition-all duration-500 hover:translate-x-2">
               <span className="block">About Company &</span>
@@ -67,15 +65,16 @@ export default function AboutCompany() {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 font-medium uppercase text-sm tracking-wider transition-all duration-300 transform hover:translate-y-1 hover:shadow-lg">
+
+              <button className="bg-[#FF9100] hover:bg-orange-600 px-6 py-3 font-medium uppercase text-sm tracking-wider transition-all duration-300 transform hover:translate-y-1 hover:shadow-lg">
                 Read More
               </button>
               
               <button 
                 onClick={handlePlayVideo}
-                className="flex items-center gap-2 bg-transparent border border-orange-500 hover:bg-orange-500/10 px-6 py-3 font-medium uppercase text-sm tracking-wider transition-all duration-300 group"
+                className="flex items-center gap-2 bg-transparent  px-6 py-3 font-medium uppercase text-sm tracking-wider transition-all duration-300 group"
               >
-                <span className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="h-8 w-8 rounded-full bg-[#FF9100] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Play size={16} fill="white" className="ml-0.5" />
                 </span>
                 <span>Play Now</span>

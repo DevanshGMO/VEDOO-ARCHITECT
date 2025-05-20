@@ -13,10 +13,10 @@ export default function DesignMoodboard() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-            Design Starts With A <span className="text-orange-500">Feeling</span>
+            Design Starts With A <span className="text-[#FF9100]">Feeling</span>
           </h2>
           <p className="text-lg text-gray-700">
-            Select Your Choice Of <span className="text-orange-500">Design</span>
+            Select Your Choice Of <span className="text-[#FF9100]">Design</span>
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export default function DesignMoodboard() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4 lg:gap-6">
         
           <div 
-            className={`relative w-full md:w-2/5 cursor-pointer overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${selectedDesign === 'minimal' ? 'ring-4 ring-orange-500' : ''}`}
+            className={`relative w-full md:w-2/5 cursor-pointer overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${selectedDesign === 'minimal' ? 'ring-4 ring-[#FF9100]' : ''}`}
             onClick={() => handleSelectDesign('minimal')}
           >
             <img 
@@ -38,7 +38,7 @@ export default function DesignMoodboard() {
             OR
           </div>
           <div 
-            className={`relative w-full md:w-2/5 cursor-pointer overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${selectedDesign === 'traditional' ? 'ring-4 ring-orange-500' : ''}`}
+            className={`relative w-full md:w-2/5 cursor-pointer overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${selectedDesign === 'traditional' ? 'ring-4 ring-[#FF9100]' : ''}`}
             onClick={() => handleSelectDesign('traditional')}
           >
             <img 
@@ -53,7 +53,7 @@ export default function DesignMoodboard() {
         {/* Next Button */}
         <div className="mt-10 md:mt-16 flex justify-center">
           <button 
-            className={`px-8 py-3 bg-orange-500 text-white font-medium rounded flex items-center justify-center transition-all duration-300 ${
+            className={`px-8 py-3 bg-[#FF9100] text-white font-medium rounded flex items-center justify-center transition-all duration-300 ${
               selectedDesign ? 'hover:bg-orange-600' : 'opacity-70 cursor-not-allowed'
             }`}
             disabled={!selectedDesign}

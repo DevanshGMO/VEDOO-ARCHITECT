@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-
-// Import images from assets folder
 import House1 from "../.././assets/House1.png";
 import House2 from "../.././assets/House2.png";
 import House3 from "../.././assets/House3.png";
 
 export default function HeroBanner() {
   <style>@import url('https://fonts.cdnfonts.com/css/enfonix');</style>;
-  // Images for the banner using project assets
+
   const images = [
     {
       id: 1,
@@ -40,7 +38,7 @@ export default function HeroBanner() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState("right");
 
-  // Function to handle image change with animation
+
   const changeImage = (index, dir) => {
     if (isAnimating) return;
 
@@ -53,7 +51,7 @@ export default function HeroBanner() {
     }, 500);
   };
 
-  // Function to handle automatic slideshow
+
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (currentIndex + 1) % images.length;
@@ -63,19 +61,19 @@ export default function HeroBanner() {
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
 
-  // Function to navigate to next image
+
   const nextImage = () => {
     const nextIndex = (currentIndex + 1) % images.length;
     changeImage(nextIndex, "right");
   };
 
-  // Function to navigate to previous image
+
   const prevImage = () => {
     const prevIndex = (currentIndex - 1 + images.length) % images.length;
     changeImage(prevIndex, "left");
   };
 
-  // Function to handle thumbnail click
+
   const handleThumbnailClick = (index) => {
     const dir = index > currentIndex ? "right" : "left";
     changeImage(index, dir);
@@ -84,22 +82,20 @@ export default function HeroBanner() {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex flex-col lg:flex-row w-full">
-        {/* Left Content Section */}
         <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center bg-white">
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold tracking-wider enfonix">
+            <h2 className="text-3xl font-enfonix">
               Innovative Spaces
             </h2>
-            <h3 className="text-4xl font-bold tracking-wider enfonix">
+            <h3 className="text-3xl font-enfonix text-[#FF9100]">
               Intelligent
             </h3>
-            <h3 className="text-4xl font-bold tracking-wider enfonix">
+            <h3 className="text-3xl font-enfonix text-[#FF9100]">
               Solutions
             </h3>
-            <h2 className="text-4xl font-bold tracking-wider font-enfonix">
-              Inspired Living
+            <h2 className="text-3xl tracking-wider font-enfonix">
+              Inspired Living.
             </h2>
-
             <p className="text-gray-800 text-lg mt-6">
               At Vedoo Architect, we blend smart design with innovation to
               create spaces that elevate how you live, work, and dream. From
@@ -113,8 +109,6 @@ export default function HeroBanner() {
                 <ArrowRight size={18} />
               </button>
             </div>
-
-            {/* Thumbnails */}
             <div className="flex space-x-4 mt-8">
               {images.map((image, index) => (
                 <div
@@ -136,27 +130,27 @@ export default function HeroBanner() {
           </div>
         </div>
 
-        {/* Right Image Section */}
         <div className="w-full lg:w-1/2 relative overflow-hidden">
           <div className="relative aspect-video lg:aspect-auto lg:h-full">
-            {/* Navigation Arrows */}
+
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
+              className="absolute left-4 top-1/2 transform-translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
               aria-label="Previous image"
             >
+              
               <ChevronLeft size={20} />
             </button>
 
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
+              className="absolute right-4 top-1/2 transform-translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
               aria-label="Next image"
             >
               <ChevronRight size={20} />
             </button>
 
-            {/* Main Image with Animation */}
+  
             <div className="w-full h-full relative overflow-hidden">
               <img
                 src={images[currentIndex].src}
@@ -168,9 +162,7 @@ export default function HeroBanner() {
                       : "-translate-x-full opacity-0"
                     : "translate-x-0 opacity-100"
                 }`}
-              />
-
-              {/* Image Label/Info */}
+              />  
               <div className="absolute bottom-4 right-4 bg-orange-500 text-white p-2 flex flex-col items-center">
                 <span className="text-xl font-bold">
                   {images[currentIndex].sqft}

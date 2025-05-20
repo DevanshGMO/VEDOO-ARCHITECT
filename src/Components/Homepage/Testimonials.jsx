@@ -62,7 +62,7 @@ export default function Testimonials() {
     <section className="py-10 px-4 bg-white">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">
-          What Our <span className="text-orange-500">Client</span> Say
+          What Our <span className="text-[#FF9100]">Client</span> Say
         </h2>
       </div>
 
@@ -103,7 +103,7 @@ export default function Testimonials() {
           <span
             key={index}
             className={`h-2 w-2 rounded-full ${
-              current / itemsPerSlide === index ? 'bg-orange-500' : 'bg-gray-300'
+              current / itemsPerSlide === index ? 'bg-[#FF9100]' : 'bg-gray-300'
             }`}
           ></span>
         ))}

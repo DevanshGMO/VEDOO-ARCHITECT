@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="text-white max-w-3xl z-10">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
           Online Interior Design For <br />
-          <span className="text-orange-500">Every Room And Budget.</span>
+          <span className="text-[#FF9100]">Every Room And Budget.</span>
         </h1>
         <p className="mb-6 text-lg md:text-xl">
           Tailored, stylish interiors that blend comfort, function, and personal taste.

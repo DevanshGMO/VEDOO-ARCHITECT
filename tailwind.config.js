@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      
+      fontFamily: {
+        enfonix: ['Enfonix', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -52,7 +52,7 @@ const Signup = () => {
             />
             <button
               type="submit"
-              className="w-full bg-[#FF9100] text-white py-3 rounded hover:bg-orange-600 transition"
+              className="w-full bg-[#FF9100] text-white py-3 rounded hover:bg-[#FF9100] transition"
             >
               Sign up
             </button>

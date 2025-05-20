@@ -11,6 +11,7 @@ import Moodboard from './Pages/Moodboard'
 import Login from './Pages/Login'
 import Signup from './Components/Signup'
 import Footer from './Components/Footer'
+import Kitchen from './Pages/Kitchen'
 const App = () => {
   return (
     <BrowserRouter>
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/Moodboard" element={<Moodboard />} />
         <Route path="/Login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
+        <Route path="/Kitchen" element={<Kitchen/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>    

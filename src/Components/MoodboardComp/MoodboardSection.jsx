@@ -79,7 +79,7 @@ export default function MoodboardSection() {
           </motion.div>
           
           <motion.div
-            className="lg:w-3/5 grid grid-cols-1 md:grid-cols-2 gap-4"
+            className="lg:w-3/5 grid grid-cols-1 lg:grid-cols-2 gap-4"
             variants={fadeIn}
           >
 

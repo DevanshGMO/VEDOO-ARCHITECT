@@ -7,19 +7,18 @@ export default function ContactForm() {
       <div
         className="md:w-1/2 w-full relative bg-cover bg-center min-h-[300px] md:min-h-auto"
         style={{
-          backgroundImage:
-            "url(" + HouseContactForm + ")",
+          backgroundImage: `url(${HouseContactForm})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center px-6 md:px-10">
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-start px-6 md:px-10">
           <div className="text-white text-center md:text-left">
-            <h1 className="text-6xl md:text-4xl font-bold leading-tight mb-2">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2">
               Luxury Residence
             </h1>
-            <h1 className="text-6xl md:text-4xl font-bold leading-tight mb-2">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2">
               Living Room
             </h1>
-            <h1 className="text-6xl md:text-4xl font-bold text-orange-500">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FF9100]">
               Interior Design
             </h1>
           </div>
@@ -29,7 +28,7 @@ export default function ContactForm() {
       {/* Right Form Section */}
       <div className="md:w-1/2 w-full bg-[#052C41] text-white p-6 sm:p-10 md:p-16 flex items-center">
         <form className="w-full space-y-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
             GET IN TOUCH WITH US
           </h2>
 
@@ -71,7 +70,7 @@ export default function ContactForm() {
                     type="radio"
                     name="subject"
                     value={item.toLowerCase().replace(/\s+/g, "")}
-                    className="accent-orange-500"
+                    className="accent-[#FF9100]"
                     defaultChecked={i === 0}
                   />
                   <span>{item}</span>
@@ -87,7 +86,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition w-full sm:w-auto"
+            className="bg-[#FF9100] text-white px-6 py-3 rounded-md hover:bg-orange-600 transition w-full sm:w-auto"
           >
             Send Message
           </button>

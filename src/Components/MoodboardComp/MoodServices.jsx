@@ -1,11 +1,9 @@
-    import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { img } from 'framer-motion/client';
 import KitchenIcon from "../.././assets/KitchenVector.svg"; 
 import LivingRoomIntro from '../.././assets/LivingRoomIcon.svg';
 import BedroomIcon from "../.././assets/BedroomIcon.svg"; // Import your SVG icons here
 export default function MoodServices() {
-  // Animation variants
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,7 +49,7 @@ export default function MoodServices() {
   // Room types data
   const roomTypes = [
     {
-      icon: "🏠", // Using emoji as placeholder for actual SVG icon
+      icon: "🏠", 
       title: "Kitchen",
       description: "Vedoo designs modern, functional kitchens blending elegance and innovation with remote precision to elevate your everyday living.",
       bgColor: "bg-white",
@@ -59,7 +57,7 @@ export default function MoodServices() {
       buttonBg: "bg-[#ff9800]"
     },
     {
-      icon: "🛋️", // Using emoji as placeholder for actual SVG icon
+      icon: "🛋️",
       title: "Living Room",
       description: "Vedoo designs modern, functional kitchens blending elegance and innovation with remote precision to elevate your everyday living.",
       bgColor: "bg-[#052536]",
@@ -67,7 +65,7 @@ export default function MoodServices() {
       buttonBg: "bg-[#ff9800]"
     },
     {
-      icon: "🛏️", // Using emoji as placeholder for actual SVG icon 
+      icon: "🛏️",
       title: "Bedroom",
       description: "Vedoo designs serene, functional bedrooms blending comfort with remote precision to create personalized spaces for rest and rejuvenation.",
       bgColor: "bg-white",
