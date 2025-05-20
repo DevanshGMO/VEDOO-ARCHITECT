@@ -1,6 +1,9 @@
     import { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { img } from 'framer-motion/client';
+import KitchenIcon from "../.././assets/KitchenVector.svg"; 
+import LivingRoomIntro from '../.././assets/LivingRoomIcon.svg';
+import BedroomIcon from "../.././assets/BedroomIcon.svg"; // Import your SVG icons here
 export default function MoodServices() {
   // Animation variants
   const containerVariants = {
@@ -97,7 +100,7 @@ export default function MoodServices() {
           {roomTypes.map((room, index) => (
             <motion.div
               key={index}
-              className={`${room.bgColor} border border-gray-100 rounded-sm overflow-hidden flex flex-col p-6 h-full`}
+              className={`${room.bgColor} border border-gray-100 rounded-sm overflow-hidden flex flex-col p-12 h-full shadow-lg`}
               variants={itemVariants}
               initial="rest"
               whileHover="hover"
@@ -107,28 +110,13 @@ export default function MoodServices() {
               <div className="mb-6">
                 <div className={`w-16 h-16 flex items-center justify-center ${room.title === "Living Room" ? "text-[#ff9800]" : "text-[#ff9800]"}`}>
                   {room.title === "Kitchen" && (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 6h16v12H4z"></path>
-                      <path d="M4 10h16"></path>
-                      <path d="M8 6V4"></path>
-                      <path d="M16 6V4"></path>
-                      <path d="M12 10v6"></path>
-                    </svg>
+                    <img src={KitchenIcon} alt="" srcset="" />
                   )}
                   {room.title === "Living Room" && (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="4" y="8" width="16" height="12" rx="2"></rect>
-                      <path d="M4 16h16"></path>
-                      <path d="M8 8V5c0-1 1-2 2-2h4c1 0 2 1 2 2v3"></path>
-                    </svg>
+                    <img src={LivingRoomIntro} alt="" srcset="" />
                   )}
                   {room.title === "Bedroom" && (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 18V6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2z"></path>
-                      <path d="M4 14h16"></path>
-                      <path d="M8 10v4"></path>
-                      <path d="M16 10v4"></path>
-                    </svg>
+                   <img src={BedroomIcon} alt="" srcset="" />
                   )}
                 </div>
               </div>

@@ -93,6 +93,7 @@ export default function MoodboardSection() {
               <img 
                 src={HouseImgOne}
                 alt="Interior design with warm lighting" 
+
                 className="w-full h-full object-cover rounded-lg"
               />
             </motion.div>
