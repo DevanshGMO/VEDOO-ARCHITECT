@@ -4,10 +4,12 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
-@font-face {
-  font-family: 'Enfonix';
-  src: url('./fonts/Enfonix-MonoPro.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
+.blinking-cursor {
+  display: inline-block;
+  animation: blinkCursor 1s steps(2, start) infinite;
+}

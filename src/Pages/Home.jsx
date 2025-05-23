@@ -1,6 +1,6 @@
-import React from "react";
+
 import HeroBanner from "../Components/Homepage/HeroBanner";
-// import MissionDesign from "../Components/Homepage/MissionDesign";
+import MissionDesign from "../Components/Homepage/MissionDesign";
 import VideoTour from "../Components/Homepage/VideoTour";
 import DesignMoodboard from "../Components/Homepage/DesignMoodboard";
 import AboutCompany from "../Components/Homepage/AboutCompany";
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <HeroBanner />
-      {/* <MissionDesign /> */}
+      <MissionDesign />
       <VideoTour />
       <DesignMoodboard />
       <AboutCompany />

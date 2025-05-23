@@ -6,6 +6,21 @@ import House3 from "../.././assets/House3.png";
 
 export default function HeroBanner() {
   <style>@import url('https://fonts.cdnfonts.com/css/enfonix');</style>;
+  const AnimatedBlinkText = ({ text, className = "" }) => {
+    return (
+      <h3 className={`text-6xl font-semibold ${className}`}>
+        {text.split("").map((char, index) => (
+          <span
+            key={index}
+            className="letter"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            {char}
+          </span>
+        ))}
+      </h3>
+    );
+  };
 
   const images = [
     {
@@ -38,7 +53,6 @@ export default function HeroBanner() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState("right");
 
-
   const changeImage = (index, dir) => {
     if (isAnimating) return;
 
@@ -51,7 +65,6 @@ export default function HeroBanner() {
     }, 500);
   };
 
-
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (currentIndex + 1) % images.length;
@@ -61,18 +74,15 @@ export default function HeroBanner() {
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
 
-
   const nextImage = () => {
     const nextIndex = (currentIndex + 1) % images.length;
     changeImage(nextIndex, "right");
   };
 
-
   const prevImage = () => {
     const prevIndex = (currentIndex - 1 + images.length) % images.length;
     changeImage(prevIndex, "left");
   };
-
 
   const handleThumbnailClick = (index) => {
     const dir = index > currentIndex ? "right" : "left";
@@ -84,18 +94,15 @@ export default function HeroBanner() {
       <div className="flex flex-col lg:flex-row w-full">
         <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center bg-white">
           <div className="space-y-6">
-            <h2 className="text-3xl font-enfonix">
-              Innovative Spaces
-            </h2>
-            <h3 className="text-3xl font-enfonix text-[#FF9100]">
-              Intelligent
+            <h2 className="text-6xl font-medium">Innovative Spaces</h2>
+            <h3 className="text-6xl font-semibold text-[#FF9100]">
+              Intelligent 
             </h3>
-            <h3 className="text-3xl font-enfonix text-[#FF9100]">
+            <h3 className="text-6xl text-[#FF9100] font-semibold">
               Solutions
             </h3>
-            <h2 className="text-3xl tracking-wider font-enfonix">
-              Inspired Living.
-            </h2>
+
+            <h2 className="text-6xl font-medium">Inspired Living.<span className="blinking-cursor">|</span></h2>
             <p className="text-gray-800 text-lg mt-6">
               At Vedoo Architect, we blend smart design with innovation to
               create spaces that elevate how you live, work, and dream. From
@@ -132,13 +139,11 @@ export default function HeroBanner() {
 
         <div className="w-full lg:w-1/2 relative overflow-hidden">
           <div className="relative aspect-video lg:aspect-auto lg:h-full">
-
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 transform-translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
               aria-label="Previous image"
             >
-              
               <ChevronLeft size={20} />
             </button>
 
@@ -150,7 +155,6 @@ export default function HeroBanner() {
               <ChevronRight size={20} />
             </button>
 
-  
             <div className="w-full h-full relative overflow-hidden">
               <img
                 src={images[currentIndex].src}
@@ -162,7 +166,7 @@ export default function HeroBanner() {
                       : "-translate-x-full opacity-0"
                     : "translate-x-0 opacity-100"
                 }`}
-              />  
+              />
               <div className="absolute bottom-4 right-4 bg-orange-500 text-white p-2 flex flex-col items-center">
                 <span className="text-xl font-bold">
                   {images[currentIndex].sqft}
