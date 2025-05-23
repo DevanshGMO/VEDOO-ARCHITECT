@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import KitchenIcon from "../.././assets/KitchenVector.svg"; 
-import LivingRoomIntro from '../.././assets/LivingRoomIcon.svg';
-import BedroomIcon from "../.././assets/BedroomIcon.svg"; // Import your SVG icons here
+import { Link } from 'react-router-dom';
+import KitchenIcon from "../../assets/KitchenVector.svg"; 
+import LivingRoomIntro from '../../assets/LivingRoomIcon.svg';
+import BedroomIcon from "../../assets/BedroomIcon.svg";
+
 export default function MoodServices() {
 
   const containerVariants = {
@@ -37,20 +39,11 @@ export default function MoodServices() {
     }
   };
 
-  const hoverVariants = {
-    rest: { scale: 1, boxShadow: "0px 0px 0px rgba(0,0,0,0.1)" },
-    hover: { 
-      scale: 1.03, 
-      boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
-      transition: { duration: 0.3 }
-    }
-  };
-
-  // Room types data
   const roomTypes = [
     {
       icon: "🏠", 
       title: "Kitchen",
+      slug: "kitchen",
       description: "Vedoo designs modern, functional kitchens blending elegance and innovation with remote precision to elevate your everyday living.",
       bgColor: "bg-white",
       textColor: "text-gray-800",
@@ -59,6 +52,7 @@ export default function MoodServices() {
     {
       icon: "🛋️",
       title: "Living Room",
+      slug: "living-room",
       description: "Vedoo designs modern, functional kitchens blending elegance and innovation with remote precision to elevate your everyday living.",
       bgColor: "bg-[#052536]",
       textColor: "text-white",
@@ -67,6 +61,7 @@ export default function MoodServices() {
     {
       icon: "🛏️",
       title: "Bedroom",
+      slug: "bedroom",
       description: "Vedoo designs serene, functional bedrooms blending comfort with remote precision to create personalized spaces for rest and rejuvenation.",
       bgColor: "bg-white",
       textColor: "text-gray-800",
@@ -106,16 +101,10 @@ export default function MoodServices() {
               whileTap={{ scale: 0.98 }}
             >
               <div className="mb-6">
-                <div className={`w-16 h-16 flex items-center justify-center ${room.title === "Living Room" ? "text-[#ff9800]" : "text-[#ff9800]"}`}>
-                  {room.title === "Kitchen" && (
-                    <img src={KitchenIcon} alt="" srcset="" />
-                  )}
-                  {room.title === "Living Room" && (
-                    <img src={LivingRoomIntro} alt="" srcset="" />
-                  )}
-                  {room.title === "Bedroom" && (
-                   <img src={BedroomIcon} alt="" srcset="" />
-                  )}
+                <div className="w-16 h-16 flex items-center justify-center text-[#ff9800]">
+                  {room.title === "Kitchen" && <img src={KitchenIcon} alt="Kitchen Icon" />}
+                  {room.title === "Living Room" && <img src={LivingRoomIntro} alt="Living Room Icon" />}
+                  {room.title === "Bedroom" && <img src={BedroomIcon} alt="Bedroom Icon" />}
                 </div>
               </div>
               
@@ -125,13 +114,15 @@ export default function MoodServices() {
                 {room.description}
               </p>
               
-              <motion.button 
-                className={`${room.buttonBg} text-white py-2 px-6 text-sm font-medium self-start uppercase`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                READ MORE
-              </motion.button>
+              <Link to={`/${room.slug}`}>
+                <motion.button 
+                  className={`${room.buttonBg} text-white py-2 px-6 text-sm font-medium self-start uppercase`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  READ MORE
+                </motion.button>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

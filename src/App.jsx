@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import AnnouncementBar from './Components/AnnouncementBar'
@@ -26,7 +25,7 @@ const App = () => {
         <Route path="/Moodboard" element={<Moodboard />} />
         <Route path="/Login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
-        <Route path="/Kitchen" element={<Kitchen/>} />
+     <Route path='/kitchen' element={<Kitchen/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>    
