@@ -32,7 +32,7 @@ const KitchenIntro = () => {
             This is not just luxury — this is timeless distinction, made to be lived in and loved for generations.
           </p>
           <button className="bg-[#FF9100] hover:bg-orange-600 transition-colors px-6 py-3 text-white font-semibold text-sm rounded">
-            START NOW
+            Read More
           </button>
         </div>
       </div>

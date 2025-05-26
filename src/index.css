@@ -13,3 +13,6 @@ body {
   display: inline-block;
   animation: blinkCursor 1s steps(2, start) infinite;
 }
+body {
+  overflow-x: hidden; /* This is the key line */
+}

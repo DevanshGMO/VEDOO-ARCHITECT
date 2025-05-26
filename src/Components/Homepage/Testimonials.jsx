@@ -10,7 +10,7 @@ const testimonials = [
     role: 'Legacy Integration Producer',
     image: Review1,
     rating: 5,
-    quote: "If you want real marketing that works and effective implementation – mobile app's got you covered.",
+    quote: "If you want real marketing that works and effective implementation - mobile app's got you covered.",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const testimonials = [
     role: 'Digital Transformation Lead',
     image: Img,
     rating: 5,
-    quote: "Vedoo’s design and functionality blew us away. Efficient and beautiful.",
+    quote: "Vedoo's design and functionality blew us away. Efficient and beautiful.",
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-10 px-4 bg-white">
+    <section className="py-10 px-4 md:py-20 bg-white">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">
           What Our <span className="text-[#FF9100]">Client</span> Say

@@ -27,7 +27,7 @@ export default function ContactForm() {
 
       <div className="md:w-1/2 w-full bg-[#052C41] text-white p-6 sm:p-10 md:p-16 flex flex-col justify-center flex-grow">
         <form className="w-full space-y-6">
-          <h2 className="text-xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-xl md:text-4xl lg:text-5xl font-bold mb-10">
             GET IN TOUCH WITH US
           </h2>
 
