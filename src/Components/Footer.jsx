@@ -1,7 +1,9 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import BackgroundImg from "./../assets/FooterBg.png";
 import BottomTabline from "./BottomTabline";
+
 export default function Footer() {
   return (
     <>
@@ -14,7 +16,6 @@ export default function Footer() {
         >
           <div className="absolute inset-0 bg-[#052536] opacity-90"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-6 pt-12 pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
             <div className="mb-8 md:mb-0">
@@ -47,93 +48,90 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* OUR LINKS Section */}
             <div className="mb-8 md:mb-0">
               <h2 className="text-xl font-medium mb-6">OUR LINKS</h2>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/" className="text-sm hover:underline">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/howitworks" className="text-sm hover:underline">
                     How It Works
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/portfolio" className="text-sm hover:underline">
                     Portfolio
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/aboutus" className="text-sm hover:underline">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/contactus" className="text-sm hover:underline">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
-            {/* OUR SERVICES Section */}
             <div className="mb-8 md:mb-0">
               <h2 className="text-xl font-medium mb-6">OUR SERVICES</h2>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/services/kitchen" className="text-sm hover:underline">
                     Kitchen
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/services/living-room" className="text-sm hover:underline">
                     Living Room
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/services/bedroom" className="text-sm hover:underline">
                     Bedroom
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/services/interior-design" className="text-sm hover:underline">
                     Interior Design
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
-            {/* OTHER LINKS Section */}
             <div>
               <h2 className="text-xl font-medium mb-6">OTHER LINKS</h2>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/moodboard" className="text-sm hover:underline">
                     Moodboard
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/faq" className="text-sm hover:underline">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/privacy-policy" className="text-sm hover:underline">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/terms-conditions" className="text-sm hover:underline">
                     Terms & Condition
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:underline">
+                  <Link to="/support" className="text-sm hover:underline">
                     Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
