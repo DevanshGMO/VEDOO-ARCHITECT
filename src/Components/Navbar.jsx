@@ -89,6 +89,9 @@ const Navbar = () => {
           <Link to="/aboutus" className="hover:text-[#FF9100]">
             About Us
           </Link>
+           <Link to="/Pricing" className="hover:text-[#FF9100]">
+            Pricing
+          </Link>
           <Link to="/contactus" className="hover:text-[#FF9100]">
             Contact Us
           </Link>
@@ -186,17 +189,20 @@ const Navbar = () => {
           <Link to="/aboutus" className="hover:text-[#FF9100]">
             About Us
           </Link>
+          <Link to="/Pricing" className="hover:text-[#FF9100]">
+            Pricing
+          </Link>
           <Link to="/contactus" className="hover:text-[#FF9100]">
             Contact Us
           </Link>
 
           <Link to="/moodboard">
-            <button className="w-fit bg-[#FF9100] text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-[#ff9800] mt-2">
+            <button className="w-full bg-[#FF9100] text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-[#ff9800] mt-2">
               Moodboard
             </button>
           </Link>
           <Link to="/login">
-            <button className="w-fit bg-[#052536] text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-slate-800">
+            <button className="w-full bg-[#052536] text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-slate-800">
               Login
             </button>
           </Link>
