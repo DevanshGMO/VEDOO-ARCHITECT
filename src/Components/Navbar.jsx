@@ -15,10 +15,11 @@ const portfolioItems = [
 ];
 
 const Navbar = () => {
+  // State to manage mobile menu and portfolio dropdown visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const closeTimeoutRef = useRef(null);
-
+    
   const handleMouseEnter = () => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
