@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Map from "../assets/Map.png";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";

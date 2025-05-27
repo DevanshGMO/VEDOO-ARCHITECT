@@ -1,28 +1,20 @@
 import { motion } from "framer-motion";
 import Kitchen from "../assets/Kitchen.png";
-export default function MoodboardSection() {
-  // Animation variants
+
+export default function kitchen() {
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8 } },
   };
 
   const slideIn = {
-    hidden: { x: -50, opacity: 0 }, // Adjusted slide in from left
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   const imageScale = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
+    hidden: { scale: 0.95, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   const buttonHover = {
@@ -31,32 +23,30 @@ export default function MoodboardSection() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4 sm:p-8 font-sans ">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12 sm:px-8 md:px-12 lg:px-20">
       <motion.div
-        className="max-w-7xl mx-auto bg-white rounded-none overflow-hidden flex flex-col md:flex-row"
+        className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center md:gap-16 lg:gap-24"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeIn}
       >
-        <motion.div className="w-full md:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        {/* Text Content */}
+        <motion.div
+          className="w-full md:w-1/2 space-y-6 md:space-y-8 text-center md:text-left mb-10 md:mb-0"
+          variants={slideIn}
+        >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             <span className="text-gray-900">Kit</span>
-            <span className="text-amber-500">chen</span>{" "}
-            {/* Changed to amber-500 as per new image */}
+            <span className="text-amber-500">chen</span>
           </h1>
-          <p className="text-gray-700 text-base sm:text-lg mb-8 leading-relaxed">
-            At the intersection of elegance and authenticity, we create homes
-            that transcend time. Each residence is a masterful composition of
-            thoughtful design, refined materials, and enduring character not
-            merely built, but crafted to become a lasting legacy. From
-            architectural detailing to curated interiors, every element speaks
-            to a deep respect for tradition, and a bold vision for modern
-            living. This is not just luxury; this is timeless distinction, made
-            to be lived in and loved for generations.
+
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
+            At the intersection of elegance and authenticity, we create homes that transcend time. Each residence is a masterful composition of thoughtful design, refined materials, and enduring character not merely built, but crafted to become a lasting legacy. From architectural detailing to curated interiors, every element speaks to a deep respect for tradition, and a bold vision for modern living. This is not just luxury; this is timeless distinction, made to be lived in and loved for generations.
           </p>
+
           <motion.button
-            className="self-center md:self-start inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-none shadow-none text-white bg-gray-900 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-300" // Removed rounded-full and shadow
+            className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white text-base font-medium hover:bg-gray-700 transition rounded-none self-center md:self-start"
             whileHover="hover"
             variants={buttonHover}
           >
@@ -78,15 +68,15 @@ export default function MoodboardSection() {
           </motion.button>
         </motion.div>
 
-        {/* Right Column: Image */}
+        {/* Image Content */}
         <motion.div
-          className="w-full md:w-1/2 min-h-[300px] md:min-h-[500px] lg:min-h-[600px] relative overflow-hidden"
+          className="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative overflow-hidden"
           variants={imageScale}
         >
           <img
             src={Kitchen}
-            alt="Interior design with warm lighting"
-            className="w-full h-full object-cover"
+            alt="Interior kitchen design"
+            className="w-full h-full object-cover rounded-none"
           />
         </motion.div>
       </motion.div>

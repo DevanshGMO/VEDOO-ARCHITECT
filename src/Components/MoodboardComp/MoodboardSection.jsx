@@ -69,12 +69,14 @@ export default function MoodboardSection() {
               animate="rest"
               variants={buttonHover}
             >
+         
               <motion.button 
                 className="bg-gray-900 text-white px-6 py-3 inline-flex items-center group"
               >
                 <span className="mr-2">EXPLORE NOW</span>
                 <span className="transform group-hover:translate-x-1 transition-transform">→</span>
               </motion.button>
+          
             </motion.div>
           </motion.div>
           

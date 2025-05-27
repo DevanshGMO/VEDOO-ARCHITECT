@@ -3,14 +3,13 @@ import Contactform from "../.././assets/Contactform.png";
 export default function ContactForm() {
   return (
     <section className="flex flex-col md:flex-row min-h-screen items-stretch">
-      {/* Left Image and Text Section */}
       <div
         className="md:w-1/2 w-full relative bg-cover bg-center min-h-[300px] md:min-h-auto"
         style={{
           backgroundImage: `url(${Contactform})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-start px-6 md:px-10">
+        <div className="absolute inset-0 bg-black/70 flex items-center justify-start px-6 md:px-10">
           <div className="text-white text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">
               Luxury Residence
@@ -26,12 +25,12 @@ export default function ContactForm() {
       </div>
 
       <div className="md:w-1/2 w-full bg-[#052C41] text-white p-6 sm:p-10 md:p-16 flex flex-col justify-center flex-grow">
-        <form className="w-full space-y-6">
+        <form className="w-full space-y-8">
           <h2 className="text-xl md:text-4xl lg:text-5xl font-bold mb-10">
             GET IN TOUCH WITH US
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-6">
             <input
               type="text"
               placeholder="First Name"
@@ -44,7 +43,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-6">
             <input
               type="email"
               placeholder="Email"
@@ -59,10 +58,10 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block mb-2 font-medium text-sm">
+            <label className="block mb-4 font-medium text-sm">
               Select Subject?
             </label>
-            <div className="flex flex-wrap gap-4 text-sm text-white">
+            <div className="flex flex-wrap gap-x-6 gap-y-4 text-sm text-white">
               {["General Inquiry", "Quotation", "Design Request"].map((item, i) => (
                 <label key={i} className="flex items-center space-x-2">
                   <input

@@ -1,78 +1,73 @@
-import React from 'react';
-import Tick from "../../assets/Tick.png"
-const FeaturedTable = () => {
-  const plans = [
-    {
-      name: "BASIC",
-      features: [true, true, false, false, false],
-    },
-    {
-      name: "PROFESSIONAL",
-      popular: true,
-      features: [true, true, true, false, false],
-    },
-    {
-      name: "ADVANCED",
-      features: [true, true, true, true, true],
-    },
-  ];
+import React from "react";
+const features = [
+  "Access to All Features",
+  "1k lookups / per month",
+  "60 minutes Monitoring interval",
+  "20% discount on backorders",
+  "Access to IP Monitoring",
+];
 
-  const features = [
-    "Access to All Features",
-    "1k lookups / per month",
-    "60 minutes Monitoring interval",
-    "20% discount on backorders",
-    "Access to Ip Monitoring",
-  ];
+const plans = {
+  Basic: [true, true, false, false, false],
+  Professional: [true, true, true, false, false],
+  Advanced: [true, true, true, true, true],
+};
 
+const CheckIcon = () => (
+  <svg
+    className="inline text-green-600 w-5 h-5"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+);
+
+const PricingTable = () => {
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
-      <div className="overflow-x-auto">
-        <table className="w-fit mx-auto table-auto border-collapse text-left min-w-full md:min-w-0">
-          <thead>
-            <tr>
-              <th className="p-6 text-xl font-bold text-gray-900 md:text-2xl lg:p-8"> {/* Increased padding for header cells */}
-                WHAT WE <span className="text-orange-500">PROVIDE</span>
-              </th>
-              {plans.map((plan, idx) => (
-                <th
-                  key={idx}
-                  className="relative bg-gray-100 p-6 text-center text-lg font-semibold text-gray-900 md:text-xl lg:p-8" // Increased padding for plan headers
+    <div className="p-4 md:p-8 max-w-7xl mx-auto bg-white shadow-lg rounded-lg">
+      <div className="text-2xl md:text-3xl font-bold mb-6">
+        WHAT WE <span className="text-orange-500">PROVIDE</span>
+      </div>
+
+      <div className="overflow-hidden">
+        <div className="grid grid-cols-4 min-w-[600px] border border-gray-100">
+
+          <div className="bg-white font-semibold border border-gray-100 p-4">&nbsp;</div>
+          {Object.entries(plans).map(([plan, _]) => (
+            <div key={plan} className="bg-gray-100 p-4 text-center font-bold relative">
+              {plan}
+              {plan === "Professional" && (
+                <span className="absolute top-1 right-1 text-xs bg-orange-500 text-white px-2 py-0.5 rounded">
+                  Popular
+                </span>
+              )}
+            </div>
+          ))}
+
+          {/* Feature Rows */}
+          {features.map((feature, rowIdx) => (
+            <React.Fragment key={feature}>
+              <div className="border border-gray-100 p-4 font-medium">
+                {feature}
+              </div>
+              {Object.values(plans).map((planFeatures, colIdx) => (
+                <div
+                  key={`${rowIdx}-${colIdx}`}
+                  className="border border-gray-100 p-4 text-center"
                 >
-                  {plan.name}
-                  {plan.popular && (
-                    <span className="absolute top-1 right-1 rounded bg-orange-400 px-2 py-0.5 text-xs text-white">
-                      Popular
-                    </span>
-                  )}
-                </th>
+                  {planFeatures[rowIdx] ? <CheckIcon /> : "—"}
+                </div>
               ))}
-            </tr>
-          </thead>
-          <tbody>
-            {features.map((feature, idx) => (
-              <tr key={idx} className="border-t">
-                <td className="p-6 text-sm text-gray-800 md:text-base lg:p-8"> {/* Increased padding for feature cells */}
-                  {feature}
-                </td>
-                {plans.map((plan, pIdx) => (
-                  <td key={pIdx} className="p-6 text-center lg:p-8"> {/* Increased padding for checkmark/dash cells */}
-                    {plan.features[idx] ? (
-                      <span className="text-green-600">
-                        <img src={Tick} alt="" width={30} />
-                      </span>
-                    ) : (
-                      <span className="text-gray-400">—</span>
-                    )}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default FeaturedTable;
+export default PricingTable;

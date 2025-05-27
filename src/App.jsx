@@ -3,7 +3,7 @@ import Home from "./Pages/Home";
 import AnnouncementBar from "./Components/AnnouncementBar";
 import Navbar from "./Components/Navbar";
 import Aboutus from "./Pages/Aboutus";
-import HowItWorks from "./Pages/HowItWorks";
+// import HowItWorks from "./Pages/HowItWorks";
 import Portfolio from "./Pages/Portfolio";
 import Contactus from "./Pages/Contactus";
 import Moodboard from "./Pages/Moodboard";
@@ -18,7 +18,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/HowItWorks" element={<HowItWorks />} />
+        {/* <Route path="/HowItWorks" element={<HowItWorks />} /> */}
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/Aboutus" element={<Aboutus />} />
         <Route path="/Contactus" element={<Contactus />} />

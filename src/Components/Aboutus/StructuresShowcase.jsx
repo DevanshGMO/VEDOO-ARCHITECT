@@ -17,10 +17,10 @@ const StructuresShowcase = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 md:py-16">
-      {/* Heading with fade-in animation */}
+    <div className="container mx-auto px-4 py-24 md:py-32">
+
       <h1
-        className={`text-4xl md:text-5xl font-semibold text-gray-900 mb-8 text-center transition-opacity duration-1000 ${
+        className={`text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center transition-opacity duration-1000 ${
           animate ? 'opacity-100' : 'opacity-0'
         }`}
       >

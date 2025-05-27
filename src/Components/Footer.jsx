@@ -47,7 +47,6 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-
             <div className="mb-8 md:mb-0">
               <h2 className="text-xl font-medium mb-6">OUR LINKS</h2>
               <ul className="space-y-3">

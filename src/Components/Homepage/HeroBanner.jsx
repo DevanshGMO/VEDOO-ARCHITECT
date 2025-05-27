@@ -6,6 +6,7 @@ import House3 from "../.././assets/House3.png";
 
 export default function HeroBanner() {
   <style>@import url('https://fonts.cdnfonts.com/css/enfonix');</style>;
+
   const AnimatedBlinkText = ({ text, className = "" }) => {
     return (
       <h3 className={`text-6xl font-semibold ${className}`}>
@@ -91,9 +92,9 @@ export default function HeroBanner() {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="flex flex-col lg:flex-row w-full">
-        <div className="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center bg-white">
-          <div className="space-y-6">
+      <div className="flex flex-col-reverse lg:flex-row w-full">
+        <div className="w-full lg:w-1/2 p-4 lg:p-12 flex flex-col justify-center bg-white">
+          <div className="space-y-4 lg:space-y-6">
             <h2 className="text-6xl font-medium">Innovative Spaces</h2>
             <h3 className="text-6xl font-semibold text-[#FF9100]">
               Intelligent 
@@ -103,7 +104,7 @@ export default function HeroBanner() {
             </h3>
 
             <h2 className="text-6xl font-medium">Inspired Living.<span className="blinking-cursor">|</span></h2>
-            <p className="text-gray-800 text-lg mt-6">
+            <p className="text-gray-800 text-lg mt-6 max-w-xl">
               At Vedoo Architect, we blend smart design with innovation to
               create spaces that elevate how you live, work, and dream. From
               interiors to virtual site monitoring, every detail reflects our
@@ -138,10 +139,10 @@ export default function HeroBanner() {
         </div>
 
         <div className="w-full lg:w-1/2 relative overflow-hidden">
-          <div className="relative aspect-video lg:aspect-auto lg:h-full">
+          <div className="relative h-[50vh] lg:h-full aspect-auto">
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 transform-translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
               aria-label="Previous image"
             >
               <ChevronLeft size={20} />
@@ -149,7 +150,7 @@ export default function HeroBanner() {
 
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 transform-translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full z-10 hover:bg-white transition-colors duration-300"
               aria-label="Next image"
             >
               <ChevronRight size={20} />

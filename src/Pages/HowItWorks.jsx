@@ -1,9 +1,9 @@
 import AboutSection from "../Components/HowItWorks/AboutSection";
 import DecorSection from "../Components/HowItWorks/DecorSection";
 import DesignSteps from "../Components/HowItWorks/DesignSteps";
-import FeaturedTable from "../Components/HowItWorks/FeaturedTable";
 import LuxuryResidenceSection from "../Components/HowItWorks/LuxuryResidenceSection"
 import ContactForm from "../Components/Homepage/ContactForm";
+import FeaturedTable from "../Components/HowItWorks/FeaturedTable"
 const HowItWorks = () => {
   return (
     <div>

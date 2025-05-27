@@ -7,7 +7,7 @@ import Testimonials from "../Components/Homepage/Testimonials";
 import AnimatedSection from "../Components/AnimatedSection";
 const Aboutus = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <AnimatedSection animationClass="fade-in">
         <AboutIntro />
       </AnimatedSection>
@@ -20,10 +20,10 @@ const Aboutus = () => {
         <StructuresShowcase />
       </AnimatedSection>
 
-      <AnimatedSection animationClass="slide-in-right">
+      <AnimatedSection animationClass="slide-in-left">
         <BrandCollaborations />
       </AnimatedSection>
-      
+
       <AnimatedSection animationClass="fade-in" threshold={0.5}>
         <VideoBanner />
       </AnimatedSection>
@@ -31,7 +31,7 @@ const Aboutus = () => {
       <AnimatedSection animationClass="slide-up">
         <Testimonials />
       </AnimatedSection>
-    </>
+    </div>
   );
 };
 

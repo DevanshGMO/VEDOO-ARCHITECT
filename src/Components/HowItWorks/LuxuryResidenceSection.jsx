@@ -1,13 +1,11 @@
-import React from "react"; // No need for useEffect or useState if not using them
 import Home1 from "../../assets/Home1.png";
 import Home2 from "../../assets/Home2.png";
 import Home3 from "../../assets/Home3.png";
 import Drawing1 from "../../assets/Drawing.png";
 import Drawing2 from "../../assets/Drawing1.png";
-// Removed: import { Home } from 'lucide-react'; as it was unused
+
 
 export default function LuxuryResidenceSection() {
-  // Array of interior design images with their source and alt text
   const interiorImages = [
     {
       src: Home1,
@@ -26,7 +24,6 @@ export default function LuxuryResidenceSection() {
 
   return (
     <div className="container mx-auto min-h-screen bg-white p-4 sm:p-6 md:p-8 font-sans mt-16">
-      {/* Header Section: Title and Subtitle */}
       <header className="text-center mb-8 md:mb-12">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
           Luxury Residence Living Room
@@ -38,7 +35,6 @@ export default function LuxuryResidenceSection() {
 
       <section className="mb-10 md:mb-14">
         <div className="flex flex-col md:flex-row md:items-center md:justify-center space-y-6 md:space-y-0 md:space-x-8">
-          {/* Drawing 1 Container */}
           <div className="w-full md:w-1/2 lg:w-2/5 max-w-2xl shadow-sm">
             <img
               src={Drawing1}
@@ -46,7 +42,6 @@ export default function LuxuryResidenceSection() {
               className="w-full h-auto object-contain rounded-md"
             />
           </div>
-          {/* Drawing 2 Container */}
           <div className="w-full md:w-1/2 lg:w-2/5 max-w-2xl shadow-sm">
             <img
               src={Drawing2}
