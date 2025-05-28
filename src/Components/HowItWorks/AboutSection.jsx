@@ -1,4 +1,4 @@
-import BgImg from "../../assets/HouseImg.png"; // Update path as needed
+import BgImg from "../../assets/HouseImg.png"; 
 
 const AboutSection = () => {
   return (
@@ -16,7 +16,6 @@ const AboutSection = () => {
                 <span className="text-[#FF9100]"> Every Room </span> And
                 <span className="text-[#FF9100]"> Budget</span>
               </h1>
-
               <p className="text-white text-md md:text-xl mb-8">
               Tailored, stylish interiors that blend comfort, function, and personal taste.Tailored, stylish interiors that blend comfort, function, and personal taste.
               </p>

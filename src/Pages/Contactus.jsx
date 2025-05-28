@@ -42,10 +42,9 @@ const Contactus = () => {
         </MapContainer>
       </div>
 
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-0">
-        <div
-          className={`bg-[#002B45] text-white p-10 relative overflow-hidden
-          transform transition-all duration-700 ease-out
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+       <div
+  className={`bg-[#002B45] text-white p-10 relative overflow-hidden border border-gray-200 shadow-sm transform transition-all duration-700 ease-out
           ${
             animate
               ? "opacity-100 translate-x-0"
@@ -109,8 +108,8 @@ const Contactus = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-1">
-                First Name
+              <label className="text-sm text-gray-700 mb-5">
+                First Name  
               </label>
               <input
                 type="text"
@@ -118,7 +117,7 @@ const Contactus = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-1">
+              <label className="text-sm text-gray-700 mb-5">
                 Last Name
               </label>
               <input
@@ -130,14 +129,14 @@ const Contactus = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-1">Email</label>
+              <label className="text-sm text-gray-700 mb-5">Email</label>
               <input
                 type="email"
                 className="border-b border-gray-400 py-2 px-1 focus:outline-none focus:ring-2 focus:ring-[#FF9100] focus:scale-105 transition-transform duration-150"
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-1">
+              <label className="text-sm text-gray-700 mb-5">
                 Phone Number
               </label>
               <input
@@ -170,7 +169,7 @@ const Contactus = () => {
           </div>
 
           <div className="flex flex-col">
-            <label className="text-sm text-gray-700 mb-1">Message</label>
+            <label className="text-sm text-gray-700 mb-5">Message</label>
             <textarea
               placeholder="Write your message.."
               className="w-full border-b border-gray-400 py-2 px-1 focus:outline-none focus:ring-2 focus:ring-[#FF9100] focus:scale-105 transition-transform duration-150"

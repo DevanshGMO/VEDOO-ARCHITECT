@@ -52,7 +52,7 @@ export default function MoodServices() {
     {
       icon: "🛋️",
       title: "Living Room",
-      slug: "living-room",
+      slug: "Livingroom",
       description: "Vedoo designs modern, functional kitchens blending elegance and innovation with remote precision to elevate your everyday living.",
       bgColor: "bg-[#052536]",
       textColor: "text-white",
@@ -93,7 +93,7 @@ export default function MoodServices() {
           {roomTypes.map((room, index) => (
             <motion.div
               key={index}
-              className={`${room.bgColor} border border-gray-100 rounded-sm overflow-hidden flex flex-col p-12 h-full shadow-lg`}
+              className={`${room.bgColor} border border-gray-100 overflow-hidden flex flex-col p-12 h-full shadow-lg`}
               variants={itemVariants}
               initial="rest"
               whileHover="hover"

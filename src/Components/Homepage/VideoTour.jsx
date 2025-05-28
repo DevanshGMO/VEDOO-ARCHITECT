@@ -97,12 +97,7 @@ export default function VideoTour() {
           </video>
         </div>
 
-        {/* Optional Call to Action */}
-        <div className="mt-8 text-center px-4 md:px-8 lg:px-16"> {/* Add padding back for button */}
-          <button className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            View More Projects
-          </button>
-        </div>
+       
       </div>
 
       {/* CSS for the animation */}

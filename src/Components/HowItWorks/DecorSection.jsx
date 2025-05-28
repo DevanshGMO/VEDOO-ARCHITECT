@@ -44,11 +44,11 @@ const DecorSection = () => {
             <div
               key={index}
               className="text-left group"
-              // Add onMouseEnter and onMouseLeave handlers
               onMouseEnter={() => setHoveredItemIndex(index)}
               onMouseLeave={() => setHoveredItemIndex(null)}
+
             >
-              <div className="overflow-hidden rounded-lg shadow-lg">
+              <div className="overflow-hidden shadow-lg">
                 <div className="relative h-64">
                   <img
                     src={hoveredItemIndex === index ? item.hoverImage : item.image} // Conditional rendering of image source

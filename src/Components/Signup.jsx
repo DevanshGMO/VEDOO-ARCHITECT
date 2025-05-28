@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
-      {/* Left Image Section */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -16,13 +15,11 @@ const Signup = () => {
         className="w-full md:w-1/2 h-64 md:h-auto"
       >
         <img
-          src={House4} // Replace with actual image path
+          src={House4}
           alt="Villa"
           className="object-cover w-full h-full"
         />
       </motion.div>
-
-      {/* Right Form Section */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -38,21 +35,21 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Enter Name"
-              className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-[#FF9100] transition"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#FF9100] transition"
             />
             <input
               type="email"
               placeholder="Enter Email"
-              className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-[#FF9100] transition"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#FF9100] transition"
             />
             <input
               type="tel"
               placeholder="Enter Mobile Number"
-              className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-[#FF9100] transition"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#FF9100] transition"
             />
             <button
               type="submit"
-              className="w-full bg-[#FF9100] text-white py-3 rounded hover:bg-[#FF9100] transition"
+              className="w-full bg-[#FF9100] text-white py-3 hover:bg-[#FF9100] transition"
             >
               Sign up
             </button>
@@ -61,7 +58,7 @@ const Signup = () => {
             <div className="flex items-center justify-center gap-2">
               <button
                 type="button"
-                className="w-full bg-gray-800 text-white py-3 rounded hover:bg-gray-700 transition flex items-center justify-center gap-2"
+                className="w-full bg-gray-800 text-white py-3 hover:bg-gray-700 transition flex items-center justify-center gap-2"
               >
                 <img src={Googleicon} alt="G" className="h-5" />
                 Or sign up with Google

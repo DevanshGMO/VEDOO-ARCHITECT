@@ -3,9 +3,11 @@ import Home2 from "../../assets/Home2.png";
 import Home3 from "../../assets/Home3.png";
 import Drawing1 from "../../assets/Drawing.png";
 import Drawing2 from "../../assets/Drawing1.png";
+import Img from "../../assets/Testimonials.png";
 
 
-export default function LuxuryResidenceSection() {
+const LuxuryResidenceSection = () => {
+
   const interiorImages = [
     {
       src: Home1,
@@ -23,7 +25,9 @@ export default function LuxuryResidenceSection() {
 
 
   return (
-    <div className="container mx-auto min-h-screen bg-white p-4 sm:p-6 md:p-8 font-sans mt-16">
+    <>
+    
+     <div className="container mx-auto min-h-screen bg-white p-4 sm:p-6 md:p-8 font-sans mt-16">
       <header className="text-center mb-8 md:mb-12">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
           Luxury Residence Living Room
@@ -68,6 +72,29 @@ export default function LuxuryResidenceSection() {
           ))}
         </div>
       </section>
+
+      <div className="bg-white py-12 px-4 sm:px-8 md:px-12 lg:px-20 text-center">
+      <blockquote className="text-lg sm:text-xl text-gray-800 max-w-4xl mx-auto">
+        “My designer truly brought our vision to life. Every detail felt personal, and the team’s support made the whole process seamless and enjoyable.”
+      </blockquote>
+
+      <div className="mt-6 flex items-center justify-center gap-4">
+        <img
+          src={Img}
+          alt="Adam Gham"
+          className="w-10 h-10 rounded-full object-cover"
+        />
+        <div className="text-left">
+          <p className="text-sm font-semibold text-gray-900">ADAM GHAM</p>
+          <p className="text-xs text-gray-600">Managing Director</p>
+        </div>
+      </div>
     </div>
-  );
+    </div>
+    
+    
+    </>
+  )
 }
+
+export default LuxuryResidenceSection

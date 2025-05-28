@@ -1,13 +1,12 @@
-import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import BackgroundImg from "./../assets/FooterBg.png";
 import BottomTabline from "./BottomTabline";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <>
-      <footer className="relative text-white">
+     <footer className="relative text-white">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -82,17 +81,17 @@ export default function Footer() {
               <h2 className="text-xl font-medium mb-6">OUR SERVICES</h2>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/services/kitchen" className="text-sm hover:underline">
+                  <Link to="/kitchen" className="text-sm hover:underline">
                     Kitchen
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/living-room" className="text-sm hover:underline">
+                  <Link to="/Livingroom" className="text-sm hover:underline">
                     Living Room
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/bedroom" className="text-sm hover:underline">
+                  <Link to="/bedroom" className="text-sm hover:underline">
                     Bedroom
                   </Link>
                 </li>
@@ -138,6 +137,9 @@ export default function Footer() {
         </div>
       </footer>
       <BottomTabline />
+    
     </>
-  );
+  )
 }
+
+export default Footer

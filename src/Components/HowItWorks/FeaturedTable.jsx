@@ -37,7 +37,7 @@ const PricingTable = () => {
         <div className="grid grid-cols-4 min-w-[600px] border border-gray-100">
 
           <div className="bg-white font-semibold border border-gray-100 p-4">&nbsp;</div>
-          {Object.entries(plans).map(([plan, _]) => (
+          {Object.entries(plans).map(([plan,_]) => (
             <div key={plan} className="bg-gray-100 p-4 text-center font-bold relative">
               {plan}
               {plan === "Professional" && (
@@ -47,8 +47,6 @@ const PricingTable = () => {
               )}
             </div>
           ))}
-
-          {/* Feature Rows */}
           {features.map((feature, rowIdx) => (
             <React.Fragment key={feature}>
               <div className="border border-gray-100 p-4 font-medium">

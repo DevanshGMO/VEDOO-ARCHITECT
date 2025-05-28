@@ -72,7 +72,7 @@ const Navbar = () => {
             </Link>
 
             {isPortfolioOpen && (
-              <div className="absolute left-0 mt-2 w-60 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50">
+              <div className="absolute left-0 mt-2 w-60 bg-white border border-gray-200 shadow-lg py-2 z-50">
                 {portfolioItems.map(({ label, to }) => (
                   <Link
                     key={to}
@@ -99,12 +99,12 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8">
           <Link to="/moodboard">
-            <button className="bg-[#FF9100] text-white font-medium px-4 py-2 rounded-md text-sm hover:bg-[#ff9800]">
+            <button className="bg-[#FF9100] text-white font-medium px-4 py-2 text-sm hover:bg-[#ff9800]">
               Moodboard
             </button>
           </Link>
           <Link to="/login">
-            <button className="bg-[#052536] text-white font-medium px-4 py-2 rounded-md text-sm hover:bg-slate-800">
+            <button className="bg-[#052536] text-white font-medium px-4 py-2 text-sm hover:bg-slate-800">
               Login
             </button>
           </Link>

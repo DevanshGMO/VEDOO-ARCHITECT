@@ -1,7 +1,3 @@
-import React from 'react';
-
-// Assuming FAQ component is defined elsewhere or will be provided.
-// For this example, we'll create a dummy FAQ component to make the code runnable.
 const FAQ = () => {
   return (
     <section className="py-12 bg-gray-50 font-sans">

@@ -76,7 +76,7 @@ const Login = () => {
                 placeholder="Enter your mobile number"
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF9100]"
+                className="w-full px-4 py-2 border focus:outline-none focus:ring-2 focus:ring-[#FF9100]"
               />
             </div>
 
@@ -92,7 +92,7 @@ const Login = () => {
                   placeholder="Enter OTP"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF9100]"
+                  className="w-full px-4 py-2 border focus:outline-none focus:ring-2 focus:ring-[#FF9100]"
                 />
               </div>
             )}
@@ -118,16 +118,16 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-[#FF9100] text-white py-2 rounded-md transition"
+              className="w-full bg-[#FF9100] text-white py-2 transition"
             >
               {otpSent ? "Sign In" : "Send OTP"}
             </button>
-            <button className="w-full border flex bg-[#052536] text-white justify-center items-center space-x-2 py-2 rounded-md transition">
+            <button className="w-full border flex bg-[#052536] text-white justify-center items-center space-x-2 py-2 transition">
               <img src={Googleicon} alt="Google" className="w-5 h-5" />
               <span>Sign in / Sign up with Google</span>
             </button>
             <p className="text-center text-sm">
-              Already have an account?{" "}
+              Already have an account? {""}
               <Link to="/signup" className="text-[#FF9100] hover:underline">
                 Signup now
               </Link>

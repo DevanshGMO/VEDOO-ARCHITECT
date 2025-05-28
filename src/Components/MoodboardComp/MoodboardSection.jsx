@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import HouseImgOne from "../../assets/House5.png"
 import HouseImgTwo from "../../assets/House6.png"
 import HouseImgThree from "../../assets/House7.png"
-export default function MoodboardSection() {
-  // Animation variants
+
+const MoodboardSection = () => {
+  
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8 } }
@@ -25,10 +25,10 @@ export default function MoodboardSection() {
     rest: { scale: 1 },
     hover: { scale: 1.05, transition: { duration: 0.2 } }
   };
-
-
   return (
-    <div className="bg-white font-sans">
+   <>
+   
+     <div className="bg-white font-sans">
       <motion.div 
         className="container mx-auto px-4 py-12 md:py-16 lg:py-20"
         initial="hidden"
@@ -132,5 +132,8 @@ export default function MoodboardSection() {
         </div>
       </motion.div>
     </div>
-  );
+   </>
+  )
 }
+
+export default MoodboardSection

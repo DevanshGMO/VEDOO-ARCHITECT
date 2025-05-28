@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Play } from 'lucide-react';
 import Img from "../.././assets/Img3.png";
-export default function AboutCompany() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+import { useNavigate } from "react-router-dom";
 
+
+const AboutCompany = () => {
+
+const [isVisible, setIsVisible] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   // Animation for section entrance
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,18 +26,23 @@ export default function AboutCompany() {
     }, 3000);
   };
 
+const navigate = useNavigate();
+const handleAboutClick = () =>{
+  navigate("/aboutus");
+}
+  
+
   return (
-    <section className="w-full bg-[#052536] text-white overflow-hidden">
+    <>
+     <section className="w-full bg-[#052536] text-white overflow-hidden">
       <div 
         className={`max-w-6xl mx-auto px-4 py-12 md:py-24 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         <div className="flex flex-col md:flex-row md:items-center">
-          {/* Image Column */}
           <div className="w-full md:w-1/2 relative mb-8 md:mb-0">
             <div className="relative">
-              {/* Orange border/frame */}
               <div className="absolute -left-3 -bottom-3 w-full h-full border-4 border-[#FF9100] transform transition-all duration-500 hover:translate-x-1 hover:translate-y-1"></div>
               
               {/* Main image */}
@@ -59,14 +67,15 @@ export default function AboutCompany() {
               <span className="block">About Company &</span>
               <span className="block mt-2">Our Services</span>
             </h2>
-            
             <p className="text-gray-300 mb-8 leading-relaxed">
               Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
             
             <div className="flex flex-wrap gap-4">
 
-              <button className="bg-[#FF9100] hover:bg-orange-600 px-6 py-3 font-medium uppercase text-sm tracking-wider transition-all duration-300 transform hover:translate-y-1 hover:shadow-lg">
+              <button
+              onClick={handleAboutClick}
+              className="bg-[#FF9100] hover:bg-orange-600 px-6 py-3 font-medium uppercase text-sm tracking-wider transition-all duration-300 transform hover:translate-y-1 hover:shadow-lg">
                 Read More
               </button>
               
@@ -84,5 +93,9 @@ export default function AboutCompany() {
         </div>
       </div>
     </section>
-  );
+    
+    </>
+  )
 }
+
+export default AboutCompany

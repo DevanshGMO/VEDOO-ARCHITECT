@@ -1,12 +1,10 @@
-// src/components/ArchitecturalServices.jsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Home, Building, Monitor, ArrowRight } from 'lucide-react';
 import ArchitectImg from "../.././assets/Architect.png"
 const MissionDesign = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger fade-in animation on component mount
     setIsVisible(true);
   }, []);
 
@@ -27,7 +25,7 @@ const MissionDesign = () => {
       description: 'Real-time remote site tracking for seamless, transparent project management.',
     },
   ];
-
+  
   return (
     <section className="font-inter bg-white py-12 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -53,7 +51,6 @@ const MissionDesign = () => {
               <br />
               Interior
             </h2>
-
             <div className="grid gap-6 mb-10">
               {services.map((service, index) => {
                 const Icon = service.icon;
