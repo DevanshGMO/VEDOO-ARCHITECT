@@ -1,9 +1,14 @@
-import React from 'react';
-
+import LivingroomComponent from "../Components/Livingroom/LivingroomComponent";
+import LivingroomPortfolio from "../Components/Livingroom/LivingroomPortfolio";
+import FAQ from "../Components/Pricing/FAQ";
 const Livingroom = () => {
   return (
-    <div>Livingroom</div>
-  )
-}
+    <div>
+      <LivingroomComponent />
+      <LivingroomPortfolio/>
+      <FAQ/>
+    </div>
+  );
+};
 
-export default Livingroom
+export default Livingroom;

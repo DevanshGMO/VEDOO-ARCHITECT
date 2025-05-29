@@ -20,11 +20,11 @@ const StructuresShowcase = () => {
     <div className="container mx-auto px-4 py-24 md:py-32">
 
       <h1
-        className={`text-5xl md:text-6xl font-bold text-gray-900 mb-8 text-left tracking-wide transition-opacity duration-1000 ${
+        className={`text-5xl md:text-6xl font-semibold text-gray-900 transition-opacity text-center duration-1000 mb-20 ${
           animate ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        Structures <span className="text-[#ff9100]"> <br /> That Inspire</span>
+        Structures <span className="text-[#ff9100]"> That Inspire</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {images.map((imageUrl, index) => (

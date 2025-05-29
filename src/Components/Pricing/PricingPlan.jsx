@@ -1,36 +1,3 @@
-const FAQ = () => {
-  return (
-    <section className="py-12 bg-gray-50 font-sans">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-12">
-          Frequently Asked Questions
-        </h2>
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">What is included in the Basic plan?</h3>
-            <p className="text-gray-600">
-              The Basic plan includes design particular Sq/m2, 1k lookups per month, 10 monitoring quota, 60 minutes monitoring interval, 20% discount on backorders, Domain Name Appraisal, IP Monitoring, and Backlink Monitoring.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Can I upgrade my plan later?</h3>
-            <p className="text-gray-600">
-              Yes, you can upgrade your plan at any time. Your billing will be adjusted accordingly.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Is there a free trial?</h3>
-            <p className="text-gray-600">
-              Currently, we do not offer a free trial, but we have a "No credit card required" policy for initial sign-up.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-
 const PricingPlan = () => {
   const pricingPlans = [
     {
@@ -87,27 +54,26 @@ const PricingPlan = () => {
   ];
 
   return (
-    <>
-     <section className="py-12 bg-white font-sans">
+    <section className="py-24 bg-white font-sans">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-24">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16">
           Our <span className="text-[#ff9100]">Pricing Plans</span>
         </h2>
-
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center items-stretch gap-8 lg:gap-16">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative flex flex-col rounded-xl shadow-lg transition-all duration-300
-                ${plan.popular ? "bg-[#052536] text-white transform scale-105" : "bg-white text-gray-800 border border-gray-200"}
-                w-full max-w-sm md:max-w-md lg:max-w-xs`} // Adjust max-width for better responsiveness
+              className={`relative flex flex-col shadow-lg transition-all duration-300
+                ${plan.popular ? "bg-[#052536] text-white transform scale-105 min-h-[720px]" : "bg-white text-gray-800 border border-gray-200 min-h-[680px]"}
+                w-full max-w-sm md:max-w-md lg:max-w-xs
+              `}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff9100] text-white text-sm font-semibold px-4 py-1 rounded-full shadow-md">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff9100] text-white text-sm font-semibold px-4 py-1 shadow-md">
                   Popular
                 </div>
               )}
-              <div className="p-8 text-center flex-grow">
+              <div className="p-6 sm:p-8 text-center flex-grow">
                 <h3
                   className={`text-lg font-semibold mb-2 ${
                     plan.popular ? "text-white" : "text-gray-600"
@@ -116,7 +82,7 @@ const PricingPlan = () => {
                   {plan.name}
                 </h3>
                 <p
-                  className={`text-sm mb-6 ${
+                  className={`text-sm mb-6 text-left ${
                     plan.popular ? "text-gray-300" : "text-gray-500"
                   }`}
                 >
@@ -131,7 +97,7 @@ const PricingPlan = () => {
                     {plan.price}
                   </span>
                   <p
-                    className={`text-sm ${
+                    className={`text-sm font-semibold mt-2 ${
                       plan.popular ? "text-gray-300" : "text-gray-500"
                     }`}
                   >
@@ -160,10 +126,9 @@ const PricingPlan = () => {
                         />
                       </svg>
                       {feature}
-                      {/* Conditionally render the "Include" span if the feature is in the includes object */}
                       {plan.includes && plan.includes[feature] && (
                         <span
-                          className={`ml-1 text-xs font-medium px-2 py-0.5 rounded-full ${
+                          className={`ml-1 text-xs font-medium px-2 py-0.5 ${
                             plan.popular ? "bg-white text-gray-800" : "bg-green-100 text-green-700"
                           }`}
                         >
@@ -174,12 +139,12 @@ const PricingPlan = () => {
                   ))}
                 </ul>
               </div>
-              <div className="p-8 pt-0 text-center">
+              <div className="p-6 sm:p-8 pt-0 text-center">
                 <button
-                  className={`w-full py-3 px-6 rounded-md font-semibold transition duration-300 ease-in-out
+                  className={`w-full py-3 px-6 font-semibold transition duration-300 ease-in-out
                     ${
                       plan.popular
-                        ? "bg-[#ff9100] text-white hover:bg-orange-600 shadow-md"
+                        ? "bg-[#ff9100] text-white shadow-md"
                         : "bg-gray-800 text-white hover:bg-gray-900 shadow-md"
                     }`}
                 >
@@ -198,8 +163,6 @@ const PricingPlan = () => {
         </div>
       </div>
     </section>
-    </>
-
   );
 };
 

@@ -47,7 +47,7 @@ const KitchenComponent = () => {
           </p>
 
           <motion.button
-            className="inline-flex items-center justify-center px-5 py-2.5 bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition rounded-none self-center md:self-start"
+            className="inline-flex items-center justify-center px-5 py-2.5 bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition self-center md:self-start"
             whileHover="hover"
             variants={buttonHover}
           >

@@ -34,7 +34,7 @@ const DecorSection = () => {
   return (
     <section className="py-16 px-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+        <h2 className="text-3xl md:text-5xl font-semibold mb-16 leading-tight md:leading-tight">
           Professional <span className="text-[#ff9100]">Interior</span> <br />
           Design, Delivered <span className="text-[#ff9100]">Online.</span>
         </h2>
@@ -51,9 +51,9 @@ const DecorSection = () => {
               <div className="overflow-hidden shadow-lg">
                 <div className="relative h-64">
                   <img
-                    src={hoveredItemIndex === index ? item.hoverImage : item.image} // Conditional rendering of image source
+                    src={hoveredItemIndex === index ? item.hoverImage : item.image} 
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" // Removed translate-y for simpler hover effect
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg">
                     <img src={Vector} alt="" />

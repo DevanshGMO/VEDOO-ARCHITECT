@@ -8,14 +8,15 @@ import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
   iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
   shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
 const Contactus = () => {
   const [animate, setAnimate] = useState(false);
-  const position = [12.9698, 77.5946]; 
+  const position = [12.9698, 77.5946];
 
   useEffect(() => {
     setAnimate(true);
@@ -23,12 +24,12 @@ const Contactus = () => {
 
   return (
     <div className="bg-white">
-      <div className="w-full h-[600px]">
+      <div className="w-full h-[500px] relative z-0">
         <MapContainer
           center={position}
           zoom={15}
           scrollWheelZoom={false}
-          className="w-full h-full"
+          className="w-full h-full z-0"
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -36,19 +37,18 @@ const Contactus = () => {
           />
           <Marker position={position}>
             <Popup>
-              BMP 543, 1st floor, Nallapullappa Garden, Akkithimanahalli Layout (Opp Divyashree Chambers) Shanthinagar, Bangalore - 560027
+              BMP 543, 1st floor, Nallapullappa Garden, Akkithimanahalli Layout
+              (Opp Divyashree Chambers) Shanthinagar, Bangalore - 560027
             </Popup>
           </Marker>
         </MapContainer>
       </div>
 
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-       <div
-  className={`bg-[#002B45] text-white p-10 relative overflow-hidden border border-gray-200 shadow-sm transform transition-all duration-700 ease-out
+        <div
+          className={`bg-[#002B45] text-white p-10 relative overflow-hidden border border-gray-200 shadow-sm transform transition-all duration-700 ease-out
           ${
-            animate
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-10"
+            animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
@@ -108,18 +108,14 @@ const Contactus = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-5">
-                First Name  
-              </label>
+              <label className="text-sm text-gray-700 mb-5">First Name</label>
               <input
                 type="text"
                 className="border-b border-gray-400 py-2 px-1 focus:outline-none focus:ring-2 focus:ring-[#FF9100] focus:scale-105 transition-transform duration-150"
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-5">
-                Last Name
-              </label>
+              <label className="text-sm text-gray-700 mb-5">Last Name</label>
               <input
                 type="text"
                 className="border-b border-gray-400 py-2 px-1 focus:outline-none focus:ring-2 focus:ring-[#FF9100] focus:scale-105 transition-transform duration-150"
@@ -136,9 +132,7 @@ const Contactus = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-5">
-                Phone Number
-              </label>
+              <label className="text-sm text-gray-700 mb-5">Phone Number</label>
               <input
                 type="tel"
                 className="border-b border-gray-400 py-2 px-1 focus:outline-none focus:ring-2 focus:ring-[#FF9100] focus:scale-105 transition-transform duration-150"
@@ -179,7 +173,7 @@ const Contactus = () => {
 
           <button
             type="submit"
-            className="bg-[#FF9100] text-white px-8 py-3 rounded shadow-md
+            className="bg-[#FF9100] text-white px-8 py-3 shadow-md
           hover:bg-[#e07a00] active:scale-95 active:shadow-lg transition duration-150"
           >
             Send Message

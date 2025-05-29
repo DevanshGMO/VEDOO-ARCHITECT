@@ -6,7 +6,7 @@ const BottomTabline = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
           <div className="mb-3 sm:mb-0">
-            <p className="text-gray-300">Copyright © 2025 . All rights reserved.</p>
+            <p className="text-gray-300">VEDOO - Copyright © 2025 . All rights reserved.</p>
           </div>
           <div className="flex space-x-4 sm:space-x-8">
             <a href="#" className="text-gray-300 hover:text-white transition-colors">

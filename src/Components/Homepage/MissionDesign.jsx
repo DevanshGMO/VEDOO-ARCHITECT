@@ -57,7 +57,7 @@ const MissionDesign = () => {
                 return (
                   <div
                     key={index}
-                    className="flex items-start p-4 rounded-lg shadow-md bg-white hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                    className="flex items-start p-4 shadow-md bg-white hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="flex-shrink-0 mr-4">
                       <Icon className="w-8 h-8 text-[#FF9100] transition-transform duration-300 group-hover:rotate-6" />

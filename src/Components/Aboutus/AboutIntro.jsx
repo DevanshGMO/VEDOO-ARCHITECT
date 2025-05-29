@@ -14,7 +14,7 @@ const AboutIntro = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-5 text-left">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-10 text-left">
         Where <span className="text-[#ff9100]">Architecture</span> Meets <br /> the Human Spirit
       </h1>
       <img

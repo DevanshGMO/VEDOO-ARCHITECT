@@ -26,11 +26,11 @@ const CheckIcon = () => (
   </svg>
 );
 
-const PricingTable = () => {
+const FeaturedTable = () => {
   return (
-    <div className="p-4 md:p-8 max-w-7xl mx-auto bg-white shadow-lg rounded-lg">
-      <div className="text-2xl md:text-3xl font-bold mb-6">
-        WHAT WE <span className="text-orange-500">PROVIDE</span>
+    <div className="p-4 md:p-8 max-w-7xl mx-auto bg-white shadow-lg rounded-lg mb-10">
+      <div className="text-4xl md:text-5xl font-bold mb-12 text-center">
+        What We <span className="text-[#ff9100]">Provide</span>
       </div>
 
       <div className="overflow-hidden">
@@ -41,7 +41,7 @@ const PricingTable = () => {
             <div key={plan} className="bg-gray-100 p-4 text-center font-bold relative">
               {plan}
               {plan === "Professional" && (
-                <span className="absolute top-1 right-1 text-xs bg-orange-500 text-white px-2 py-0.5 rounded">
+                <span className="absolute top-1 right-1 text-xs bg-[#ff9100] text-white px-2 py-0.5 rounded">
                   Popular
                 </span>
               )}
@@ -68,4 +68,4 @@ const PricingTable = () => {
   );
 };
 
-export default PricingTable;
+export default FeaturedTable;

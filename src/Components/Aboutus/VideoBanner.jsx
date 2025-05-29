@@ -58,7 +58,7 @@ const VideoBanner = () => {
 
           <button
             onClick={handleContactClick}
-            className="bg-[#ff9100] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out text-lg"
+            className="bg-[#ff9100] text-white font-bold py-3 px-8 shadow-lg transition duration-300 ease-in-out text-lg"
           >
             CONTACT US
           </button>

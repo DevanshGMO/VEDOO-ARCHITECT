@@ -28,11 +28,11 @@ const LuxuryResidenceSection = () => {
     <>
     
      <div className="container mx-auto min-h-screen bg-white p-4 sm:p-6 md:p-8 font-sans mt-16">
-      <header className="text-center mb-8 md:mb-12">
+      <header className="text-3xl md:text-5xl font-bold text-[#052536] md:leading-tight text-center mb-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
           Luxury Residence Living Room
         </h1>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff9100] mt-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#ff9100] mt-2">
           Interior Design
         </h2>
       </header>
@@ -43,7 +43,7 @@ const LuxuryResidenceSection = () => {
             <img
               src={Drawing1}
               alt="Architectural Floor Plan Drawing"
-              className="w-full h-auto object-contain rounded-md"
+              className="w-full h-auto object-contain"
             />
           </div>
           <div className="w-full md:w-1/2 lg:w-2/5 max-w-2xl shadow-sm">

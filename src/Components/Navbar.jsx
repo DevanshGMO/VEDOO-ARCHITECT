@@ -15,7 +15,6 @@ const portfolioItems = [
 ];
 
 const Navbar = () => {
-  // State to manage mobile menu and portfolio dropdown visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const closeTimeoutRef = useRef(null);
@@ -35,8 +34,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white shadow-md px-4 py-3 z-50 relative">
-      <div className="flex items-center justify-around">
+    <nav className="w-full bg-white shadow-md px-4 py-3 z-50 relative"> 
+      <div className="flex items-center justify-around"> 
         <Link to="/">
           <img src={Logo} alt="Vedoo Logo" className="h-8 w-auto" />
         </Link>
@@ -197,12 +196,12 @@ const Navbar = () => {
           </Link>
 
           <Link to="/moodboard">
-            <button className="w-full bg-[#FF9100] text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-[#ff9800] mt-2">
+            <button className="w-full bg-[#FF9100] text-white font-semibold px-4 py-2 text-sm hover:bg-[#ff9800] mt-2">
               Moodboard
             </button>
           </Link>
           <Link to="/login">
-            <button className="w-full bg-[#052536] text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-slate-800">
+            <button className="w-full bg-[#052536] text-white font-semibold px-4 py-2 text-sm hover:bg-slate-800">
               Login
             </button>
           </Link>
