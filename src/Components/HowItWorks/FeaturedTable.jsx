@@ -1,4 +1,5 @@
 import React from "react";
+
 const features = [
   "Access to All Features",
   "1k lookups / per month",

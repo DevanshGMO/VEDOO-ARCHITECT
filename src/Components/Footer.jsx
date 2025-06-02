@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="absolute inset-0 bg-[#052536] opacity-90"></div>
         </div>
         <div className="relative z-10 container mx-auto px-6 pt-12 pb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div className="mb-8 md:mb-0">
               <h2 className="text-xl font-medium mb-6">CONTACT</h2>
               <div className="flex items-start mb-4">

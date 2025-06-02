@@ -53,7 +53,7 @@ export default function DesignMoodboard() {
         {/* Next Button */}
         <div className="mt-10 md:mt-16 flex justify-center">
           <button 
-            className={`px-8 py-3 bg-[#FF9100] text-white font-medium rounded flex items-center justify-center transition-all duration-300 ${
+            className={`px-8 py-3 bg-[#FF9100] text-white font-medium flex items-center justify-center transition-all duration-300 ${
               selectedDesign ? 'hover:bg-orange-600' : 'opacity-70 cursor-not-allowed'
             }`}
             disabled={!selectedDesign}

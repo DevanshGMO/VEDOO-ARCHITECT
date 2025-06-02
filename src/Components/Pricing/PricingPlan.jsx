@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 const PricingPlan = () => {
+  const navigate = useNavigate();
+
   const pricingPlans = [
     {
       name: "BASIC",
-      tagline: "For all individuals and starters who want to start with domaning.",
+      tagline:
+        "For all individuals and starters who want to start with domaning.",
       price: "₹6,999",
       billing: "Single Mood",
       features: [
@@ -39,7 +44,8 @@ const PricingPlan = () => {
     },
     {
       name: "ADVANCED",
-      tagline: "For all individuals and starters who want to start with domaning.",
+      tagline:
+        "For all individuals and starters who want to start with domaning.",
       price: "₹1,19,999",
       billing: "Full Design and Virtual Monitor",
       features: [
@@ -54,7 +60,7 @@ const PricingPlan = () => {
   ];
 
   return (
-    <section className="py-24 bg-white font-sans">
+    <section className="py-16 bg-white font-sans">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16">
           Our <span className="text-[#ff9100]">Pricing Plans</span>
@@ -64,7 +70,11 @@ const PricingPlan = () => {
             <div
               key={index}
               className={`relative flex flex-col shadow-lg transition-all duration-300
-                ${plan.popular ? "bg-[#052536] text-white transform scale-105 min-h-[720px]" : "bg-white text-gray-800 border border-gray-200 min-h-[680px]"}
+                ${
+                  plan.popular
+                    ? "bg-[#052536] text-white transform scale-105 min-h-[720px]"
+                    : "bg-white text-gray-800 border border-gray-200 min-h-[680px]"
+                }
                 w-full max-w-sm md:max-w-md lg:max-w-xs
               `}
             >
@@ -129,7 +139,9 @@ const PricingPlan = () => {
                       {plan.includes && plan.includes[feature] && (
                         <span
                           className={`ml-1 text-xs font-medium px-2 py-0.5 ${
-                            plan.popular ? "bg-white text-gray-800" : "bg-green-100 text-green-700"
+                            plan.popular
+                              ? "bg-white text-gray-800"
+                              : "bg-green-100 text-green-700"
                           }`}
                         >
                           {plan.includes[feature]}
@@ -141,6 +153,9 @@ const PricingPlan = () => {
               </div>
               <div className="p-6 sm:p-8 pt-0 text-center">
                 <button
+                  onClick={() =>
+                    navigate("/ordersummary")
+                  }
                   className={`w-full py-3 px-6 font-semibold transition duration-300 ease-in-out
                     ${
                       plan.popular

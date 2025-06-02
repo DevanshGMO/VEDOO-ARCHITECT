@@ -18,7 +18,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const closeTimeoutRef = useRef(null);
-    
+
   const handleMouseEnter = () => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
@@ -30,22 +30,23 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setIsPortfolioOpen(false);
-    }, 300); 
+    }, 300);
   };
 
+  // Helper class for the hover effect
+  const hoverEffectClass = "relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF9100] after:transition-all after:duration-300 hover:after:w-full";
+
   return (
-    <nav className="w-full bg-white shadow-md px-4 py-3 z-50 relative"> 
-      <div className="flex items-center justify-around"> 
+    <nav className="w-full bg-white shadow-md px-4 py-3 z-50 relative">
+      <div className="flex items-center justify-evenly">
         <Link to="/">
           <img src={Logo} alt="Vedoo Logo" className="h-8 w-auto" />
         </Link>
 
-
         <div className="hidden md:flex items-center gap-6 font-semibold text-sm text-slate-800">
-          <Link to="/howitworks" className="hover:text-[#FF9100]">
+          <Link to="/howitworks" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             How It Works
           </Link>
-
 
           <div
             className="relative group"
@@ -54,7 +55,7 @@ const Navbar = () => {
           >
             <Link
               to="/portfolio"
-              className="hover:text-[#FF9100] flex items-center gap-1"
+              className={`hover:text-[#FF9100] flex items-center gap-1 ${hoverEffectClass}`}
             >
               Portfolio
               <svg
@@ -85,13 +86,13 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/aboutus" className="hover:text-[#FF9100]">
+          <Link to="/aboutus" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             About Us
           </Link>
-           <Link to="/Pricing" className="hover:text-[#FF9100]">
+          <Link to="/Pricing" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             Pricing
           </Link>
-          <Link to="/contactus" className="hover:text-[#FF9100]">
+          <Link to="/contactus" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             Contact Us
           </Link>
         </div>
@@ -140,7 +141,7 @@ const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col gap-2 mt-3 px-2 font-semibold text-sm text-slate-800">
-          <Link to="/howitworks" className="hover:text-[#FF9100]">
+          <Link to="/howitworks" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             How It Works
           </Link>
 
@@ -152,6 +153,7 @@ const Navbar = () => {
               <Link
                 to="/portfolio"
                 onClick={(e) => e.stopPropagation()}
+                className={`${hoverEffectClass}`} 
               >
                 Portfolio
               </Link>
@@ -185,13 +187,13 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/aboutus" className="hover:text-[#FF9100]">
+          <Link to="/aboutus" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             About Us
           </Link>
-          <Link to="/Pricing" className="hover:text-[#FF9100]">
+          <Link to="/Pricing" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             Pricing
           </Link>
-          <Link to="/contactus" className="hover:text-[#FF9100]">
+          <Link to="/contactus" className={`hover:text-[#FF9100] ${hoverEffectClass}`}>
             Contact Us
           </Link>
 

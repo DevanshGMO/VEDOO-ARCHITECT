@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./../assets/Logo.png";
 import Img from "./../assets/House1.png";
 import { Link } from "react-router-dom";
@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 const Login = () => {
   const [resendMessage, setResendMessage] = useState("");
-
   const [animate, setAnimate] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
   const [mobile, setMobile] = useState("");
@@ -26,20 +25,17 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // handle login with OTP
   };
   const handleResendOtp = (e) => {
     e.preventDefault();
-    // You can call resend OTP API here
     setResendMessage("OTP Resent Successfully");
     setTimeout(() => {
       setResendMessage("");
-    }, 3000); // Hide after 3 seconds
+    }, 2000);
   };
 
-  return (
-    <div className="flex flex-col md:flex-row min-h-screen shadow-cyan-500/50"> 
-
+  return (  
+    <div className="flex flex-col md:flex-row min-h-screen shadow-cyan-500/50">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -48,7 +44,6 @@ const Login = () => {
       >
         <img src={Img} alt="Villa" className="object-cover w-full h-full" />
       </motion.div>
-
 
       <div
         className={`w-full md:w-1/2 flex items-center justify-center p-6
@@ -65,7 +60,6 @@ const Login = () => {
             className="space-y-4"
             onSubmit={otpSent ? handleLogin : handleSendOtp}
           >
-
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Mobile Number
@@ -80,7 +74,6 @@ const Login = () => {
               />
             </div>
 
-    
             {otpSent && (
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -101,12 +94,8 @@ const Login = () => {
                 {resendMessage}
               </div>
             )}
-    
-            <div className="flex justify-between items-center text-sm">
-              <label className="flex items-center space-x-2">
-                <input type="checkbox" className="form-checkbox" />
-                <span>Remember me</span>
-              </label>
+
+            <div className="flex justify-center items-center text-sm">
               {otpSent && (
                 <button
                   onClick={handleResendOtp}
@@ -127,7 +116,7 @@ const Login = () => {
               <span>Sign in / Sign up with Google</span>
             </button>
             <p className="text-center text-sm">
-              Already have an account? {""}
+              Already have an account? {" "}
               <Link to="/signup" className="text-[#FF9100] hover:underline">
                 Signup now
               </Link>

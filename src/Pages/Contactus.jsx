@@ -17,7 +17,6 @@ L.Icon.Default.mergeOptions({
 const Contactus = () => {
   const [animate, setAnimate] = useState(false);
   const position = [12.9698, 77.5946];
-
   useEffect(() => {
     setAnimate(true);
   }, []);

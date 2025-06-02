@@ -27,7 +27,7 @@ const LuxuryResidenceSection = () => {
   return (
     <>
     
-     <div className="container mx-auto min-h-screen bg-white p-4 sm:p-6 md:p-8 font-sans mt-16">
+     <div className="container mx-auto min-h-screen bg-white p-2 sm:p-4 md:p-6 font-sans mt-16">
       <header className="text-3xl md:text-5xl font-bold text-[#052536] md:leading-tight text-center mb-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
           Luxury Residence Living Room

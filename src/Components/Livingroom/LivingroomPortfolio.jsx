@@ -9,7 +9,7 @@ const LivingroomPortfolio = () => {
     { id: 1, src: Image1, alt: 'Modern Kitchen Design with Wooden Cabinets' },
     { id: 2, src: Image2, alt: 'Minimalist Kitchen Island with Pendant Lights' },
     { id: 3, src: Image3, alt: 'White Kitchen with Dark Island and Modern Appliances' },
-  ];
+  ];  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

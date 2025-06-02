@@ -11,7 +11,7 @@ export default function ContactForm() {
       >
         <div className="absolute inset-0 bg-black/70 flex items-center justify-start px-6 md:px-10">
           <div className="text-white text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-  tight mb-4">
               Luxury Residence
             </h1>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">
@@ -84,7 +84,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="bg-[#FF9100] text-white px-6 py-3 rounded-md hover:bg-orange-600 transition w-full sm:w-auto"
+            className="bg-[#FF9100] text-white px-6 py-3 hover:bg-orange-600 transition w-full sm:w-auto"
           >
             Send Message
           </button>

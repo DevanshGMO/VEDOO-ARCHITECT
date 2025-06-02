@@ -44,7 +44,7 @@ const MissionDesign = () => {
             </div>
           </div>
           <div className={`w-full lg:w-1/2 text-gray-800 transition-opacity duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-4xl md:text-5xl font-semibold leading-10 mb-8">
+            <h2 className="text-4xl md:text-5xl font-semibold md:leading-tight mb-8">
               Mission Is <span className="text-[#FF9100]">Design</span>
               <br />
               Develop The Best
@@ -71,8 +71,8 @@ const MissionDesign = () => {
               })}
             </div>
 
-            <button className="flex items-center bg-gray-800 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-[#ff9100] transition-colors duration-300 shadow-md">
-              OUR SERVICES
+            <button className="flex items-center bg-gray-800 text-white py-3 px-6 text-lg font-semibold hover:bg-[#ff9100] transition-colors duration-300 shadow-md">
+              Explore More
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </div>
