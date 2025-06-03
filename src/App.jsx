@@ -13,6 +13,9 @@ import Footer from "./Components/Footer";
 import Pricing from "./Pages/Pricing";
 import OrderSummaryCard from "./Pages/OrderSummaryCard";
 import ShippingAddress from "./Pages/ShippingAddress";
+import Kitchen from "./Pages/Kitchen";  
+import Livingroom from "./Pages/Livingroom";
+import Bedroom from "./Pages/Bedroom"
 
 const App = () => {
   return (
@@ -30,6 +33,9 @@ const App = () => {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/ordersummary" element={<OrderSummaryCard />} />
+        <Route path="/kitchen" element={<Kitchen/>} /> 
+        <Route path="/livingroom" element={<Livingroom/>}/>
+        <Route path="/bedroom" element={<Bedroom/>} />
         <Route path="/shipping" element={<ShippingAddress />} />
       </Routes>
       <Footer />

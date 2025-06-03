@@ -6,7 +6,6 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
 
 delete L.Icon.Default.prototype._getIconUrl;
-
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
     "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
@@ -57,12 +56,12 @@ const Contactus = () => {
 
           <div className="space-y-6 text-sm">
             <div className="flex items-center space-x-4">
-              <FiPhone className="text-xl" />
+              <FiPhone className="text-xl" /> 
               <span>+91 97763 43829</span>
             </div>
             <div className="flex items-center space-x-4">
               <FiMail className="text-xl" />
-              <span>arnav.eagle@gmail.com</span>
+              <span>vedoo.in@gmail.com</span>
             </div>
             <div className="flex items-start space-x-4">
               <FiMapPin className="text-xl mt-1" />

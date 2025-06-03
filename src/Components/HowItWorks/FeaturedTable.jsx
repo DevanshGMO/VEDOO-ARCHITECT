@@ -33,10 +33,8 @@ const FeaturedTable = () => {
       <div className="text-4xl md:text-5xl font-bold mb-12 text-center">
         What We <span className="text-[#ff9100]">Provide</span>
       </div>
-
       <div className="overflow-hidden">
         <div className="grid grid-cols-4 min-w-[600px] border border-gray-100">
-
           <div className="bg-white font-semibold border border-gray-100 p-4">&nbsp;</div>
           {Object.entries(plans).map(([plan,_]) => (
             <div key={plan} className="bg-gray-100 p-4 text-center font-bold relative">
