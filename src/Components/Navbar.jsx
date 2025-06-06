@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import{ useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './../assets/Logo.png';
 
@@ -33,7 +33,6 @@ const Navbar = () => {
     }, 300);
   };
 
-  // Helper class for the hover effect
   const hoverEffectClass = "relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF9100] after:transition-all after:duration-300 hover:after:w-full";
 
   return (

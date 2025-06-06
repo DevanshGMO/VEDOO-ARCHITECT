@@ -154,8 +154,8 @@ const PricingPlan = () => {
               <div className="p-6 sm:p-8 pt-0 text-center">
                 <button
                   onClick={() =>
-                    navigate("/ordersummary")
-                  }
+                    navigate("/shipping")
+                  } // Changed from /ordersummary to /shippingaddress
                   className={`w-full py-3 px-6 font-semibold transition duration-300 ease-in-out
                     ${
                       plan.popular

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Logo from "./../assets/Logo.png";
 import Img from "./../assets/House8.png";
 import { motion } from "framer-motion";
@@ -10,6 +11,7 @@ const ShippingAddress = () => {
   const [sameAsCurrent, setSameAsCurrent] = useState(false);
 
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     setShowForm(true);
@@ -35,20 +37,29 @@ const ShippingAddress = () => {
     if (e.target.checked) {
       setPermanentAddress(currentAddress);
     }
+    // No need for else block here, as changing permanentAddress when unchecked
+    // would be handled by direct input if desired.
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Simulate API call or data processing
     console.log({
       currentAddress,
       permanentAddress,
       pincode,
     });
-    alert("Shipping address submitted!");
+
+    // In a real application, you'd perform validation and then an API call.
+    // If the API call is successful:
+    // alert("Shipping address submitted!"); // Remove this alert for better UX
     setCurrentAddress("");
     setPermanentAddress("");
     setPincode("");
     setSameAsCurrent(false);
+
+    // Redirect to the order confirmation page
+    navigate("/ordersummary");
   };
 
   return (
@@ -148,7 +159,7 @@ const ShippingAddress = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#ff9100] text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              className="w-full bg-[#ff9100] text-white py-2 px-4 rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             >
               Proceed
             </button>

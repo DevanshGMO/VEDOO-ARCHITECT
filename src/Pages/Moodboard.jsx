@@ -8,7 +8,6 @@ import BedRoomIntro from "../Components/MoodboardComp/BedRoomIntro";
 import Testimonials from "../Components/Homepage/Testimonials";
 const Moodboard = () => {
   return (
-
     <>
     <MoodboardSection />
     <MoodServices/>

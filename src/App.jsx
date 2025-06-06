@@ -16,13 +16,15 @@ import ShippingAddress from "./Pages/ShippingAddress";
 import Kitchen from "./Pages/Kitchen";  
 import Livingroom from "./Pages/Livingroom";
 import Bedroom from "./Pages/Bedroom"
+import DesignChoice from "./Pages/DesignChoice";
+
 
 const App = () => {
   return (
     <BrowserRouter>
       <AnnouncementBar />
       <Navbar />
-      <Routes>
+      <Routes>  
         <Route path="/" element={<Home />} />
         <Route path="/HowItWorks" element={<HowItWorks />} />
         <Route path="/portfolio" element={<Portfolio />} />
@@ -37,6 +39,7 @@ const App = () => {
         <Route path="/livingroom" element={<Livingroom/>}/>
         <Route path="/bedroom" element={<Bedroom/>} />
         <Route path="/shipping" element={<ShippingAddress />} />
+        <Route path="/MoodboardSelection" element={<DesignChoice/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
