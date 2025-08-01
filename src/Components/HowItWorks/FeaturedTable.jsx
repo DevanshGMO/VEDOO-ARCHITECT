@@ -29,37 +29,56 @@ const CheckIcon = () => (
 
 const FeaturedTable = () => {
   return (
-    <div className="p-4 md:p-8 max-w-7xl mx-auto bg-white shadow-lg rounded-lg mb-10">
+    <div className="p-4 md:p-8 max-w-7xl mx-auto bg-white shadow-lg rounded-lg mb-10 font-sans">
       <div className="text-4xl md:text-5xl font-bold mb-12 text-center">
         What We <span className="text-[#ff9100]">Provide</span>
       </div>
-      <div className="overflow-hidden">
-        <div className="grid grid-cols-4 min-w-[600px] border border-gray-100">
-          <div className="bg-white font-semibold border border-gray-100 p-4">&nbsp;</div>
-          {Object.entries(plans).map(([plan,_]) => (
-            <div key={plan} className="bg-gray-100 p-4 text-center font-bold relative">
-              {plan}
-              {plan === "Professional" && (
-                <span className="absolute top-1 right-1 text-xs bg-[#ff9100] text-white px-2 py-0.5 rounded">
-                  Popular
-                </span>
-              )}
+
+      {/* This container will handle horizontal scrolling on small screens */}
+      <div className="overflow-x-auto">
+        <div className="min-w-[700px] border border-gray-200 rounded-lg overflow-hidden">
+          {/* Table Header */}
+          <div className="grid grid-cols-4 bg-gray-50">
+            <div className="font-semibold p-4 text-left text-gray-800 border-r border-gray-200">
+              &nbsp;
             </div>
-          ))}
+            {Object.entries(plans).map(([planName, _]) => (
+              <div
+                key={planName}
+                className="p-4 text-center font-bold relative text-gray-800 border-r last:border-r-0 border-gray-200"
+              >
+                {planName}
+                {planName === "Professional" && (
+                  <span className="absolute top-1 right-1 text-xs bg-[#ff9100] text-white px-2 py-0.5 rounded-full shadow-md">
+                    Popular
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Table Rows */}
           {features.map((feature, rowIdx) => (
-            <React.Fragment key={feature}>
-              <div className="border border-gray-100 p-4 font-medium">
+            <div
+              key={feature}
+              className="grid grid-cols-4 border-t border-gray-200"
+            >
+              <div className="p-4 font-medium text-gray-700 bg-white border-r border-gray-200">
                 {feature}
               </div>
               {Object.values(plans).map((planFeatures, colIdx) => (
                 <div
                   key={`${rowIdx}-${colIdx}`}
-                  className="border border-gray-100 p-4 text-center"
+                  className="p-4 text-center bg-white border-r last:border-r-0 border-gray-200"
                 >
-                  {planFeatures[rowIdx] ? <CheckIcon /> : "—"}
+                  {planFeatures[rowIdx] ? (
+                    <CheckIcon />
+                  ) : (
+                    <span className="text-gray-400">—</span>
+                  )}
                 </div>
               ))}
-            </React.Fragment>
+            </div>
           ))}
         </div>
       </div>

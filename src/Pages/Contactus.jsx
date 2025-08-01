@@ -61,7 +61,7 @@ const Contactus = () => {
             </div>
             <div className="flex items-center space-x-4">
               <FiMail className="text-xl" />
-              <span>vedoo.in@gmail.com</span>
+              <span>support@vedoo.in</span>
             </div>
             <div className="flex items-start space-x-4">
               <FiMapPin className="text-xl mt-1" />

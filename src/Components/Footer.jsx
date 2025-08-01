@@ -6,7 +6,7 @@ import BottomTabline from "./BottomTabline";
 const Footer = () => {
   return (
     <>
-     <footer className="relative text-white">
+      <footer className="relative text-white">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -96,8 +96,8 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/interior-design" className="text-sm hover:underline">
-                    Interior Design
+                  <Link to="/moodboard" className="text-sm hover:underline">
+                    Moodboard
                   </Link>
                 </li>
               </ul>
@@ -108,24 +108,19 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <Link to="/moodboard" className="text-sm hover:underline">
-                    Moodboard
+                    Terms And Condition
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/faq" className="text-sm hover:underline">
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy-policy" className="text-sm hover:underline">
+                  <Link
+                    to="/privacy-policy"
+                    className="text-sm hover:underline"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
-                <li>
-                  <Link to="/terms-conditions" className="text-sm hover:underline">
-                    Terms & Condition
-                  </Link>
-                </li>
+
                 <li>
                   <Link to="/support" className="text-sm hover:underline">
                     Support
@@ -137,9 +132,8 @@ const Footer = () => {
         </div>
       </footer>
       <BottomTabline />
-    
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

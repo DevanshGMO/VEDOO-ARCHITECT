@@ -7,16 +7,18 @@ import AboutCompany from "../Components/Homepage/AboutCompany";
 import MoodServices from "../Components/MoodboardComp/MoodServices";
 import Testimonials from "../Components/Homepage/Testimonials";
 import ContactForm from "../Components/Homepage/ContactForm";
+import BeforeAfterSlider from "../Components/Homepage/BeforeAfterSlider";
 
 const Home = () => {
   return (
     <>
       <HeroBanner />
-      <MissionDesign />
       <VideoTour />
+      <MoodServices />
+      <BeforeAfterSlider/>
+      <MissionDesign />
       <DesignMoodboard />
       <AboutCompany />
-      <MoodServices />
       <ContactForm />
       <Testimonials />
     </>

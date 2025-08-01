@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Logo from "../assets/Logo.png";
 import Googleicon from "../assets/Googleicon.png";
@@ -53,8 +52,6 @@ const Signup = () => {
             >
               Sign up
             </button>
-
-            {/* Google Signup */}
             <div className="flex items-center justify-center gap-2">
               <button
                 type="button"

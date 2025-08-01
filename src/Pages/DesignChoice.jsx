@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import img1 from "../assets/MoodSelection/m1.png"
 import img2 from "../assets/MoodSelection/m2.png"
@@ -50,7 +50,7 @@ const DesignChoice = () => {
     if (step + 1 < totalSteps) {
       setStep(step + 1);
     } else {
-      navigate('/thank-you');
+      navigate('/pricing');
     }
   };
 

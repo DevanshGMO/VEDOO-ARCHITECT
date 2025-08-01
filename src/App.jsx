@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import AnnouncementBar from "./Components/AnnouncementBar";
+// import AnnouncementBar from "./Components/AnnouncementBar";
 import Navbar from "./Components/Navbar";
 import Aboutus from "./Pages/Aboutus";
 import HowItWorks from "./Pages/HowItWorks";
@@ -17,12 +17,13 @@ import Kitchen from "./Pages/Kitchen";
 import Livingroom from "./Pages/Livingroom";
 import Bedroom from "./Pages/Bedroom"
 import DesignChoice from "./Pages/DesignChoice";
+import ScrollToTop from "./Hooks/ScrollToTop";
 
 
 const App = () => {
   return (
     <BrowserRouter>
-      <AnnouncementBar />
+    <ScrollToTop/>
       <Navbar />
       <Routes>  
         <Route path="/" element={<Home />} />

@@ -1,10 +1,12 @@
 import AboutIntro from "../Components/Aboutus/AboutIntro";
 import BrandCollaborations from "../Components/Aboutus/BrandCollaborations";
 import DesignShowcase from "../Components/Aboutus/DesignShowcase";
-import StructuresShowcase from "../Components/Aboutus/StructuresShowcase";
+// import StructuresShowcase from "../Components/Aboutus/StructuresShowcase";
 import VideoBanner from "../Components/Aboutus/VideoBanner";
 import Testimonials from "../Components/Homepage/Testimonials";
 import AnimatedSection from "../Components/AnimatedSection";
+// import OurTeam from "../Components/Aboutus/OurTeam";
+
 const Aboutus = () => {
   return (
     <div className="overflow-x-hidden">
@@ -16,13 +18,17 @@ const Aboutus = () => {
         <DesignShowcase />
       </AnimatedSection>
 
-      <AnimatedSection animationClass="slide-in-left">
+      {/* <AnimatedSection animationClass="slide-in-left">
         <StructuresShowcase />
-      </AnimatedSection>
+      </AnimatedSection> */}
 
-      <AnimatedSection animationClass="slide-in-left">
+      {/* <AnimatedSection animationClass="slide-in-left">
+        <OurTeam />
+      </AnimatedSection> */}
+
+      {/* <AnimatedSection animationClass="slide-in-left">
         <BrandCollaborations />
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       <AnimatedSection animationClass="fade-in" threshold={0.5}>
         <VideoBanner />
